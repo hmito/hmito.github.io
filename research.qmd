@@ -1,0 +1,8 @@
+---
+title: 研究紹介
+listing:
+  contents: research
+  sort: "order desc"
+  type: default
+  categories: false
+---

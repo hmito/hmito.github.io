@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Koichi Ito web site"
+  navbar:
+    pinned: true
+    collapse: false
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "研究内容"
+        href: research.qmd
+      - text: "業績"
+        href: publication.qmd
+      - text: "プログラミング"
+        href: program.qmd
+    right:
+      - text: "English"
+        href: index_en.qmd
+      - icon: envelope
+        aria-label: email
+        href: "mailto:mail.marvinschmitt@gmail.com"  
+  search: false
+
+format:
+  html:
+    theme: zephyr
