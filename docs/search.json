@@ -4,28 +4,7 @@
     "href": "research.html",
     "title": "研究紹介",
     "section": "",
-    "text": "サメと小魚の間の活動時間をめぐる「鬼ごっこ」\n\n\n\n\n\nサメは餌である小魚たちと鬼ごっこをしている？\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n正直に蜜がなくなったことを伝える花のシグナル？\n\n\n\n\n\n花の中には、咲いている最中に花の色を変える植物がいます。しかしどうしてそんなことをするのでしょう？\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n協力における多型の進化\n\n\n\n\n\nなぜ生物は多型\n\n\n\n\n \n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "research/floral_color_change.html",
-    "href": "research/floral_color_change.html",
-    "title": "正直に蜜がなくなったことを伝える花のシグナル？",
-    "section": "",
-    "text": "生物は時に互いに助け合ったりします。"
-  },
-  {
-    "objectID": "research/floral_color_change.html#生物の協力",
-    "href": "research/floral_color_change.html#生物の協力",
-    "title": "正直に蜜がなくなったことを伝える花のシグナル？",
-    "section": "",
-    "text": "生物は時に互いに助け合ったりします。"
-  },
-  {
-    "objectID": "research/floral_color_change.html#多型",
-    "href": "research/floral_color_change.html#多型",
-    "title": "正直に蜜がなくなったことを伝える花のシグナル？",
-    "section": "多型",
-    "text": "多型\n協力レベルに多型があったりもするんです。不思議ですね。\n\n\n\nハコネウツギ（Photo by Qwert1234; 一部トリミングする改変）"
+    "text": "No matching items"
   },
   {
     "objectID": "index_en.html",
@@ -89,47 +68,5 @@
     "title": "プログラミング",
     "section": "",
     "text": "C++の解説記事をいくつかQiita 上にて公開中です。特に以下の記事は、数値解析の際などに参考になるかもしれません。よろしければご覧ください。\n\nC++で常微分方程式入門\n常微分方程式の数値解析用ライブラリ boost::odeint についての解説記事です。簡単につかえて、計算精度も計算速度もしっかり制御できる、非常に良くできたライブラリです。ルンゲクッタ法を自分で書くぐらいなら、ぜひ使うべきライブラリです。\n\n\nC++20 スマートポインタ入門\nC++のメモリ管理の負担を軽減する、スマートポインタについての解説記事です。もし普段malloc/freeやnew/deleteを書くことがあれば、この記事がお役に立てるかもしれません。C++11以降進化を続けてきたスマートポインタのC++20時代の使い方をまとめています。\n\n\nそれ、ポインタ使わなくてもできるよ：Ｃ言語のポインタとC++の流儀\nポインタに注目して書いた、C言語ユーザーやC++ビギナーへのC++入門記事です。\n\n\nC++で効率よく重複のない乱数列を生成する\n実際に利用する場合に最も速いのはどうすべきか？の視点から、重複なし乱数列の生成アルゴリズムについて解説しています"
-  },
-  {
-    "objectID": "research/cooperation.html",
-    "href": "research/cooperation.html",
-    "title": "協力における多型の進化",
-    "section": "",
-    "text": "生物は時に互いに助け合ったりします。"
-  },
-  {
-    "objectID": "research/cooperation.html#生物の協力",
-    "href": "research/cooperation.html#生物の協力",
-    "title": "協力における多型の進化",
-    "section": "",
-    "text": "生物は時に互いに助け合ったりします。"
-  },
-  {
-    "objectID": "research/cooperation.html#多型",
-    "href": "research/cooperation.html#多型",
-    "title": "協力における多型の進化",
-    "section": "多型",
-    "text": "多型\n協力レベルに多型があったりもするんです。不思議ですね。"
-  },
-  {
-    "objectID": "research/shark_swim_time.html",
-    "href": "research/shark_swim_time.html",
-    "title": "サメと小魚の間の活動時間をめぐる「鬼ごっこ」",
-    "section": "",
-    "text": "生物は時に互いに助け合ったりします。"
-  },
-  {
-    "objectID": "research/shark_swim_time.html#生物の協力",
-    "href": "research/shark_swim_time.html#生物の協力",
-    "title": "サメと小魚の間の活動時間をめぐる「鬼ごっこ」",
-    "section": "",
-    "text": "生物は時に互いに助け合ったりします。"
-  },
-  {
-    "objectID": "research/shark_swim_time.html#多型",
-    "href": "research/shark_swim_time.html#多型",
-    "title": "サメと小魚の間の活動時間をめぐる「鬼ごっこ」",
-    "section": "多型",
-    "text": "多型\n協力レベルに多型があったりもするんです。不思議ですね。\n\n\n\nサメ"
   }
 ]
