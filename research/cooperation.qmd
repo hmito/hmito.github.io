@@ -2,6 +2,7 @@
 title: "協力における多型の進化"
 description: "なぜ生物は多型"
 order: 1
+dtaft: true
 ---
 
 ## 生物の協力
