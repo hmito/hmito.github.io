@@ -5,8 +5,8 @@ project:
 website:
   title: "Koichi Ito web site"
   navbar:
-    pinned: true
-    collapse: false
+    pinned: false
+    collapse: true
     left:
       - text: "Home"
         href: index.qmd
