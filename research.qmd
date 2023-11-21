@@ -2,6 +2,7 @@
 title: 研究紹介
 listing:
   type: default
+  image-align: left
   contents: research
   sort: "order desc"
   categories: false
