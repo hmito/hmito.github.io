@@ -4,7 +4,7 @@
     "href": "research.html",
     "title": "研究紹介",
     "section": "",
-    "text": "正直に蜜がなくなったことを伝える花のシグナル？\n        \n        \n        \n        \n            花の中には、花蜜などの報酬の量が減るころに花の色を変える植物がいます。まるで色を変えることで報酬がなくなったことを「正直」に送粉者に伝えているようなこの振る舞いの裏にある、適応的な意義を研究してみました。"
+    "text": "No matching items"
   },
   {
     "objectID": "index_en.html",
@@ -70,27 +70,6 @@
     "text": "C++の解説記事をいくつかQiita 上にて公開中です。特に以下の記事は、数値解析の際などに参考になるかもしれません。\n\nC++で常微分方程式入門\n常微分方程式の数値解析用ライブラリ boost::odeint についての解説記事です。簡単につかえて、計算精度も計算速度もしっかり制御できる、非常に良くできたライブラリです。ルンゲクッタ法を自分で書くぐらいなら、ぜひ使うべきライブラリです。\n\n\nC++20 スマートポインタ入門\nC++のメモリ管理の負担を軽減する、スマートポインタについての解説記事です。もし普段、動的メモリ確保、すなわちmalloc/freeやnew/deleteを書くことがあれば、この記事がお役に立てるかもしれません。C++11以降進化を続けてきたスマートポインタのC++20時代の使い方をまとめています。\n\n\nそれ、ポインタ使わなくてもできるよ：Ｃ言語のポインタとC++の流儀\nポインタに注目して書いた、C言語ユーザーやC++ビギナーへのC++入門記事です。\n\n\nC++で効率よく重複のない乱数列を生成する\n実際に利用する場合に最も速いのはどうすべきか？の視点から、重複なし乱数列の生成アルゴリズムについて解説しています"
   },
   {
-    "objectID": "research/floral_color_change.html",
-    "href": "research/floral_color_change.html",
-    "title": "正直に蜜がなくなったことを伝える花のシグナル？",
-    "section": "",
-    "text": "花の中には、一つの花の開花期間中に、花色が変化させる植物がしばしば存在していることが知られてます。例えば、ハコネウツギは開花した際には白い色をしているのに、しばらくするとわざわざ色素を生産して赤色に変わることが知られています。\n\n\n\n鮮やかな赤と白の花をつけるハコネウツギ（Photo by Qwert1234; 一部トリミングする改変）\n\n\n面白いことに、花色の変化後は報酬の量が少なくなっていることが報告されています。つまり、わざわざ花が「色を変えて」、報酬がなくなったことを送粉者に伝えているような振る舞いをしているわけです。\nこのような、「正直に報酬がなくなったことを知らせている」ように見える現象は他にも知られています。例えば、"
-  },
-  {
-    "objectID": "research/floral_color_change.html#花色変化",
-    "href": "research/floral_color_change.html#花色変化",
-    "title": "正直に蜜がなくなったことを伝える花のシグナル？",
-    "section": "",
-    "text": "花の中には、一つの花の開花期間中に、花色が変化させる植物がしばしば存在していることが知られてます。例えば、ハコネウツギは開花した際には白い色をしているのに、しばらくするとわざわざ色素を生産して赤色に変わることが知られています。\n\n\n\n鮮やかな赤と白の花をつけるハコネウツギ（Photo by Qwert1234; 一部トリミングする改変）\n\n\n面白いことに、花色の変化後は報酬の量が少なくなっていることが報告されています。つまり、わざわざ花が「色を変えて」、報酬がなくなったことを送粉者に伝えているような振る舞いをしているわけです。\nこのような、「正直に報酬がなくなったことを知らせている」ように見える現象は他にも知られています。例えば、"
-  },
-  {
-    "objectID": "research/floral_color_change.html#多型",
-    "href": "research/floral_color_change.html#多型",
-    "title": "正直に蜜がなくなったことを伝える花のシグナル？",
-    "section": "多型",
-    "text": "多型\n協力レベルに多型があったりもするんです。不思議ですね。"
-  },
-  {
     "objectID": "index_en.html#membership-of-professional-societies",
     "href": "index_en.html#membership-of-professional-societies",
     "title": "Koichi Ito",
@@ -117,5 +96,12 @@
     "title": "Koichi Ito",
     "section": "Experiences",
     "text": "Experiences\n\n2022-present Faculty of Environmental Earth Science, Hokkaido University, Japan.  Assistant Professor\n2021-2022 International Institute for Zoonosis Control, Hokkaido University, Japan.  Postdoctoral Research Fellow, PI: Ryosuke Omori\n2017-2021 Department of Zoology, University of British Columbia, Canada.  Postdoctoral Research Fellow, PI: Michael Doebeli\n2016-2017 College of Life and Environmental Science, University of Exeter, UK.  Associate Research Fellow, PI: Andrew Higginson\n2015-2016 Department of Biology, Kyushu University, Japan.  JSPS Postdoctoral Research Fellow, PI: Yoh Iwasa\n2012-2015 Center for Ecological Research, Kyoto University, Japan.  Ph.D. (Science), Advisor: Atsushi Yamauchi\n2010-2012 Center for Ecological Research, Kyoto University, Japan.  M.S. (Science), Advisor: Atsushi Yamauchi\n2006-2010 Division of Biology, Faculty of Science, Kyoto University, Japan.  B.S. (Science)"
+  },
+  {
+    "objectID": "publication.html",
+    "href": "publication.html",
+    "title": "業績",
+    "section": "",
+    "text": "[Koichi Ito - Google Scholar Citation]\n\nContinuous irregular dynamics with multiple neutral trajectories permit species coexistence in competitive communities\nAtsushi Yamauchi, Koichi Ito, Shota Shibasaki, Toshiyuki Namba. 2023. Theoretical Population Biology (149): 39-47.\n\n\nFuture behaviours decision-making regarding travel avoidance during COVID-19 outbreaks\nKoichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Ryosuke Omori. 2022. Scientific Reports(12-1): 19780.\n\n\nIncorporating thermodynamics in predator–prey games predicts the diel foraging patterns of poikilothermic predators\nKoichi Ito, Andrew D. Higginson, Graeme D. Ruxton, Yannis P. Papastamatiou. 2021. Journal of Animal Ecology (00): 1-13.\n\n\nSterile males and females can synergistically suppress wild pests targeted by sterile insect technique\nYusuke Ikegawa, Koichi Ito, Chihiro Himuro, Atsushi Honma. 2021. Journal of Theoretical Biology (530): 110878.\n\n\nColonization process determines species diversity via competitive quasi‐exclusion\nAtsushi Yamauchi, Koichi Ito, Shota Shibasaki. 2021. Ecology and Evolution (00): 1-11.\n\n\nOn the importance of evolving phenotype distributions on evolutionary diversification\nGil J. B. Henriques, Koichi Ito, Christoph Hauert, Michael Doebeli. 2021. PLOS Computational Biology (17-2): e1008733 .\n\n\nEvolution of honest reward signal in flowers\nKoichi Ito, Miki F. Suzuki, Ko Mochizuki, 2021. Proceedings of the Royal Society B (288): 20202848.\n\n\nThe joint evolution of cooperation and competition\nKoichi Ito, Michael Doebeli, 2019. Journal of Theoretical Biology (480): 1-12.\n\n\nOptimal foraging by herbivores maintains polymorphism in defence in a natural plant population\nYasuhiro Sato†, Koichi Ito†, Hiroshi Kudoh, 2017. Functional Ecology (31-12): 2233-2243. † equal contribution\n\n\nThe evolution of cooperation by negotiation in a noisy world\nKoichi Ito, John McNamara, Atsushi Yamauchi, Andrew Higginson, 2016. Journal of Evolutionary Biology (30-3): 603-615.\n\n\nRelationship between aggregation of rewards and the possibility of polymorphism in continuous snowdrift games\nKoichi Ito, Hisashi Ohtsuki, Atsushi Yamauchi, 2015. Journal of Theoretical Biology (372):47-53.\n\n\nTheoretical study of evolution of polymorphism in the level of anti-herbivore defense in plants\nKoichi Ito, Atsushi Yamauchi, 2011. Journal of Plant Interactions (6):183-184."
   }
 ]

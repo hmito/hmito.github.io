@@ -59,9 +59,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-language','listing-title','listing-description','listing-order','listing-draft','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-language","listing-title","listing-description","listing-order","listing-draft","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -156,36 +156,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post data-index='0' data-listing-file-modified-sort='1700533285177' data-listing-reading-time-sort='1'>
-    <div class=" thumbnail"="">
-        <a href="./research/floral_color_change.html">
-        <!-- preview image tag here -->
-        </a>
-    
-    </div>
-    <div class="body">
-        <a href="./research/floral_color_change.html">
-        <h3 class="no-anchor listing-title">正直に蜜がなくなったことを伝える花のシグナル？</h3>
-        <div class="listing-subtitle"></div>
-        </a>
-        <a href="./research/floral_color_change.html">
-        <div class="delink listing-description">
-            花の中には、花蜜などの報酬の量が減るころに花の色を変える植物がいます。まるで色を変えることで報酬がなくなったことを「正直」に送粉者に伝えているようなこの振る舞いの裏にある、適応的な意義を研究してみました。
-        </div>
-        </a>
-    </div>
-    <div class="metadata">
-        <a href="./research/floral_color_change.html">
-            <!-- meta stuff here -->
-        </a>
-    </div>
+
 </div>
-</div></main></div>
-
-
- <!-- /main -->
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -419,7 +399,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
- <!-- /content -->
+</div> <!-- /content -->
 
 
 
