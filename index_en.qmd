@@ -1,6 +1,6 @@
 ---
 title: "Koichi Ito"
-subtitle: "Assisitant Professor, Faculty of Environmental Earth Science, Hokkaido University" 
+description: "Faculty of Environmental Earth Science, Hokkaido University, Assisitant Professor"
 about:
   id: hero-heading
   template: jolla
@@ -9,26 +9,25 @@ about:
 
 
 :::{#hero-heading}
-生物は、長い進化の中で時に不可思議で驚くような能力や振舞いを身に着けてきました。私は、そうした一見不思議な生物の振舞いを、数学や計算機の力を借りてその背後にあるメカニズムを解明し、現象の本質を明らかにする研究を行っています。
-
 ### keywords
 Mathematical Ecology, Evolutionary Biology, Animal Behaviour, Game Theory, Data Science
 :::
 
-## 経歴
-- 2022年-現在　北海道大学地球環境科学研究院 特任助教
-- 2021-2022年　北海道大学人獣共通感染症国際共同研究所　バイオインフォマティクス部門　研究員
-- 2017-2021年　カナダ　ブリティッシュコロンビア大学動物学部　PI: Michael Doebeli　研究員
-- 2016-2017年　イギリス　エくセター大学生命環境カレッジ　PI: Andrew Higginson　研究員
-- 2015-2016年　九州大学理学部　巌佐庸研究室　学振特別研究員
-- 2010-2015年　京都大学生態学研究センター　修士課程・博士課程
-- 2006-2010年　京都大学理学部理学科
+## Research Experiences
+- 2022-present Faculty of Environmental Earth Science, Hokkaido University, Japan.<br/>&emsp; Assistant Professor
+- 2021-2022 International Institute for Zoonosis Control, Hokkaido University, Japan.<br/>&emsp; Postdoctoral Research Fellow, PI: Ryosuke Omori 
+- 2017-2021 Department of Zoology, University of British Columbia, Canada.<br/>&emsp; Postdoctoral Research Fellow, PI: Michael Doebeli
+- 2016-2017 College of Life and Environmental Science, University of Exeter, UK.<br/>&emsp; Associate Research Fellow, PI: Andrew Higginson
+- 2015-2016 Department of Biology, Kyushu University, Japan.<br/>&emsp; JSPS Postdoctoral Research Fellow, PI: Yoh Iwasa
+- 2012-2015 Center for Ecological Research, Kyoto University, Japan.<br/>&emsp; Ph.D. (Science), Advisor: Atsushi Yamauchi
+- 2010-2012 Center for Ecological Research, Kyoto University, Japan.<br/>&emsp; M.S. (Science), Advisor: Atsushi Yamauchi
+- 2006-2010 Division of Biology, Faculty of Science, Kyoto University, Japan.<br/>&emsp; B.S. (Science)
 
-## 所属学会
-- 2010年-現在　日本数理生物学会
-- 2010年-現在　日本生態学会
-- 2011年-現在　個体群生態学会
-- 2015年-現在　種生物学会　
+## Membership of Professional Societies
+- 2010-present Japanese Society for Mathematical Biology
+- 2010-present The Ecological Society of Japan
+- 2011-present The Society of Population Ecology
+- 2015-present The Society for the Study of Species Biology
 
 ## Contact
 {{< fa envelope >}} koichi.ito [at] ees.hokudai.ac.jp

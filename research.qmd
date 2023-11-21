@@ -1,8 +1,9 @@
 ---
 title: 研究紹介
 listing:
+  template: src/gallery.ejs
   contents: research
   sort: "order desc"
-  type: default
   categories: false
 ---
+
