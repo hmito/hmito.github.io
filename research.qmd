@@ -1,10 +1,20 @@
 ---
 title: 研究紹介
 listing:
+  id: research-list
   type: default
   image-align: left
   contents: research
   sort: "order desc"
   categories: false
+  fields: [image, title, description]
 ---
 
+## 数理生態学とは？
+一見不可思議な生物の振る舞いを見つけた時、どんな風に調べればいいでしょう？　ひたすら行動を観察？　ケースで飼育して実験？　遺伝子やたんぱく質などミクロな視点から解析？　過去の様々なデータと比較しての統計解析？
+
+私の専門とする数理生態学は、数式や計算機を使って生物の振る舞いを考える研究分野です。生物の振るまい
+
+## これまでの研究例の紹介
+::: {#research-list}
+:::

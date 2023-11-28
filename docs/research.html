@@ -54,20 +54,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-research-list .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-research-list'] = new List('listing-research-list', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -161,18 +161,89 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<section id="数理生態学とは" class="level2">
+<h2 class="anchored" data-anchor-id="数理生態学とは">数理生態学とは？</h2>
+<p>一見不可思議な生物の振る舞いを見つけた時、どんな風に調べればいいでしょう？　ひたすら行動を観察？　ケースで飼育して実験？　遺伝子やたんぱく質などミクロな視点から解析？　過去の様々なデータと比較しての統計解析？</p>
+<p>私の専門とする数理生態学は、数式や計算機を使って生物の振る舞いを考える研究分野です。生物の振るまい</p>
+</section>
+<section id="これまでの研究例の紹介" class="level2">
+<h2 class="anchored" data-anchor-id="これまでの研究例の紹介">これまでの研究例の紹介</h2>
+<div id="listing-research-list" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-left" data-index="0" data-listing-file-modified-sort="1701150563490" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./research/shark_swim_time.html"> <p class="card-img-top"><img src="research\shark_swim_time\shark.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
+<div class="body">
+<a href="./research/shark_swim_time.html">
+<h3 class="no-anchor listing-title">
+サメと小魚の間の活動時間をめぐる「鬼ごっこ」
+</h3>
+<div class="listing-subtitle">
 
+</div>
+<div class="listing-description">
+<p>サメは餌である小魚たちと鬼ごっこをしている？</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./research/shark_swim_time.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="1" data-listing-file-modified-sort="1701150559208" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./research/floral_color_change.html"> <p class="card-img-top"><img src="research\floral_color_change\Weigela_coraeensis_10_small.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
+<div class="body">
+<a href="./research/floral_color_change.html">
+<h3 class="no-anchor listing-title">
+正直に蜜がなくなったことを伝える花のシグナル？
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>花の中には、花蜜などの報酬の量が減るころに花の色を変える植物がいます。まるで色を変えることで報酬がなくなったことを「正直」に送粉者に伝えているようなこの振る舞いの裏にある、適応的な意義を研究してみました。</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./research/floral_color_change.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="2" data-listing-file-modified-sort="1701150568147" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./research/cooperation.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./research/cooperation.html">
+<h3 class="no-anchor listing-title">
+協力における多型の進化
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>なぜ生物は多型</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./research/cooperation.html"> </a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
