@@ -1,31 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "伊藤公一",
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "研究紹介",
     "section": "",
-    "text": "捕食者・被食者の関係、花と送付者のような共生関係、個体間での助け合いと争い・・・人間同様生物の世界でも「利害の対立」が頻繁に生じています。私はこの生物における利害の対立に注目して生き物の行動や進化、社会関係について理論的な視点から研究をしています。\n\n\n数理生態学　進化生物学　動物行動学　ゲーム理論　データサイエンス"
+    "text": "No matching items"
   },
   {
-    "objectID": "index.html#経歴",
-    "href": "index.html#経歴",
-    "title": "伊藤公一",
-    "section": "経歴",
-    "text": "経歴\n\n2022年-現在　北海道大学地球環境科学研究院 特任助教\n2021-2022年　北海道大学人獣共通感染症国際共同研究所バイオインフォマティクス部門　研究員\n2017-2021年　カナダ　ブリティッシュコロンビア大学動物学部　PI: Michael Doebeli　研究員\n2016-2017年　イギリス　エくセター大学生命環境カレッジ　PI: Andrew Higginson　研究員\n2015-2016年　九州大学理学部　巌佐庸研究室　学振特別研究員\n2010-2015年　京都大学生態学研究センター　修士課程・博士課程\n2006-2010年　京都大学理学部理学科"
-  },
-  {
-    "objectID": "index.html#所属学会",
-    "href": "index.html#所属学会",
-    "title": "伊藤公一",
-    "section": "所属学会",
-    "text": "所属学会\n\n2010年-現在　日本数理生物学会\n2010年-現在　日本生態学会\n2011年-現在　個体群生態学会\n2015年-現在　種生物学会"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "伊藤公一",
-    "section": "Contact",
-    "text": "Contact\n koichi.ito [at] ees.hokudai.ac.jp\n koichi.ito.bio [at] outlook.com"
+    "objectID": "publication.html",
+    "href": "publication.html",
+    "title": "業績",
+    "section": "",
+    "text": "[Koichi Ito - Google Scholar Citation]\n\nHuman movement decisions during Coronavirus Disease 2019\nRyosuke Omori, Koichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Yoh Iwasa. 2023. (under review).\n\n\nTime changes of customer behavior on accommodation reservation: a case study of Japan\nKoichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Ryosuke Omori. 2023. Japan Journal of Industrial and Applied Mathematics (in print).\n\n\nCompetition model explains trends of long‐term fertilization in plant communities\nAtsushi Yamauchi, Koichi Ito, Shota Shibasaki. 2023. Ecology and Evolution (13-2): e9832.\n\n\nContinuous irregular dynamics with multiple neutral trajectories permit species coexistence in competitive communities\nAtsushi Yamauchi, Koichi Ito, Shota Shibasaki, Toshiyuki Namba. 2023. Theoretical Population Biology (149): 39-47.\n\n\nFuture behaviours decision-making regarding travel avoidance during COVID-19 outbreaks\nKoichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Ryosuke Omori. 2022. Scientific Reports(12-1): 19780.\n\n\nIncorporating thermodynamics in predator–prey games predicts the diel foraging patterns of poikilothermic predators\nKoichi Ito, Andrew D. Higginson, Graeme D. Ruxton, Yannis P. Papastamatiou. 2021. Journal of Animal Ecology (00): 1-13.\n\n\nSterile males and females can synergistically suppress wild pests targeted by sterile insect technique\nYusuke Ikegawa, Koichi Ito, Chihiro Himuro, Atsushi Honma. 2021. Journal of Theoretical Biology (530): 110878.\n\n\nColonization process determines species diversity via competitive quasi‐exclusion\nAtsushi Yamauchi, Koichi Ito, Shota Shibasaki. 2021. Ecology and Evolution (00): 1-11.\n\n\nOn the importance of evolving phenotype distributions on evolutionary diversification\nGil J. B. Henriques, Koichi Ito, Christoph Hauert, Michael Doebeli. 2021. PLOS Computational Biology (17-2): e1008733 .\n\n\nEvolution of honest reward signal in flowers\nKoichi Ito, Miki F. Suzuki, Ko Mochizuki, 2021. Proceedings of the Royal Society B (288): 20202848.\n\n\nThe joint evolution of cooperation and competition\nKoichi Ito, Michael Doebeli, 2019. Journal of Theoretical Biology (480): 1-12.\n\n\nOptimal foraging by herbivores maintains polymorphism in defence in a natural plant population\nYasuhiro Sato†, Koichi Ito†, Hiroshi Kudoh, 2017. Functional Ecology (31-12): 2233-2243. † equal contribution\n\n\nThe evolution of cooperation by negotiation in a noisy world\nKoichi Ito, John McNamara, Atsushi Yamauchi, Andrew Higginson, 2016. Journal of Evolutionary Biology (30-3): 603-615.\n\n\nRelationship between aggregation of rewards and the possibility of polymorphism in continuous snowdrift games\nKoichi Ito, Hisashi Ohtsuki, Atsushi Yamauchi, 2015. Journal of Theoretical Biology (372):47-53.\n\n\nTheoretical study of evolution of polymorphism in the level of anti-herbivore defense in plants\nKoichi Ito, Atsushi Yamauchi, 2011. Journal of Plant Interactions (6):183-184."
   },
   {
     "objectID": "index_en.html",
@@ -56,24 +42,38 @@
     "text": "Contact\n koichi.ito [at] ees.hokudai.ac.jp\n koichi.ito.bio [at] outlook.com"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "伊藤公一",
+    "section": "",
+    "text": "捕食者・被食者の関係、花と送付者のような共生関係、個体間での助け合いと争い・・・人間同様生物の世界でも「利害の対立」が頻繁に生じています。私はこの生物における利害の対立に注目して生き物の行動や進化、社会関係について理論的な視点から研究をしています。\n\n\n数理生態学　進化生物学　動物行動学　ゲーム理論　データサイエンス"
+  },
+  {
+    "objectID": "index.html#経歴",
+    "href": "index.html#経歴",
+    "title": "伊藤公一",
+    "section": "経歴",
+    "text": "経歴\n\n2022年-現在　北海道大学地球環境科学研究院 特任助教\n2021-2022年　北海道大学人獣共通感染症国際共同研究所バイオインフォマティクス部門　研究員\n2017-2021年　カナダ　ブリティッシュコロンビア大学動物学部　PI: Michael Doebeli　研究員\n2016-2017年　イギリス　エくセター大学生命環境カレッジ　PI: Andrew Higginson　研究員\n2015-2016年　九州大学理学部　巌佐庸研究室　学振特別研究員\n2010-2015年　京都大学生態学研究センター　修士課程・博士課程\n2006-2010年　京都大学理学部理学科"
+  },
+  {
+    "objectID": "index.html#所属学会",
+    "href": "index.html#所属学会",
+    "title": "伊藤公一",
+    "section": "所属学会",
+    "text": "所属学会\n\n2010年-現在　日本数理生物学会\n2010年-現在　日本生態学会\n2011年-現在　個体群生態学会\n2015年-現在　種生物学会"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "伊藤公一",
+    "section": "Contact",
+    "text": "Contact\n koichi.ito [at] ees.hokudai.ac.jp\n koichi.ito.bio [at] outlook.com"
+  },
+  {
     "objectID": "program.html",
     "href": "program.html",
     "title": "プログラミング",
     "section": "",
     "text": "C++の解説記事をいくつかQiita 上にて公開中です。特に以下の記事は、数値解析の際などに参考になるかもしれません。\n\nC++で常微分方程式入門\n常微分方程式の数値解析用ライブラリ boost::odeint についての解説記事です。簡単につかえて、計算精度も計算速度もしっかり制御できる、非常に良くできたライブラリです。ルンゲクッタ法を自分で書くぐらいなら、ぜひ使うべきライブラリです。\n\n\nC++20 スマートポインタ入門\nC++のメモリ管理の負担を軽減する、スマートポインタについての解説記事です。もし普段、動的メモリ確保、すなわちmalloc/freeやnew/deleteを書くことがあれば、この記事がお役に立てるかもしれません。C++11以降進化を続けてきたスマートポインタのC++20時代の使い方をまとめています。\n\n\nそれ、ポインタ使わなくてもできるよ：Ｃ言語のポインタとC++の流儀\nポインタに注目して書いた、C言語ユーザーやC++ビギナーへのC++入門記事です。\n\n\nC++で効率よく重複のない乱数列を生成する\n実際に利用する場合に最も速いのはどうすべきか？の視点から、重複なし乱数列の生成アルゴリズムについて解説しています"
-  },
-  {
-    "objectID": "publication.html",
-    "href": "publication.html",
-    "title": "業績",
-    "section": "",
-    "text": "[Koichi Ito - Google Scholar Citation]\n\nContinuous irregular dynamics with multiple neutral trajectories permit species coexistence in competitive communities\nAtsushi Yamauchi, Koichi Ito, Shota Shibasaki, Toshiyuki Namba. 2023. Theoretical Population Biology (149): 39-47.\n\n\nFuture behaviours decision-making regarding travel avoidance during COVID-19 outbreaks\nKoichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Ryosuke Omori. 2022. Scientific Reports(12-1): 19780.\n\n\nIncorporating thermodynamics in predator–prey games predicts the diel foraging patterns of poikilothermic predators\nKoichi Ito, Andrew D. Higginson, Graeme D. Ruxton, Yannis P. Papastamatiou. 2021. Journal of Animal Ecology (00): 1-13.\n\n\nSterile males and females can synergistically suppress wild pests targeted by sterile insect technique\nYusuke Ikegawa, Koichi Ito, Chihiro Himuro, Atsushi Honma. 2021. Journal of Theoretical Biology (530): 110878.\n\n\nColonization process determines species diversity via competitive quasi‐exclusion\nAtsushi Yamauchi, Koichi Ito, Shota Shibasaki. 2021. Ecology and Evolution (00): 1-11.\n\n\nOn the importance of evolving phenotype distributions on evolutionary diversification\nGil J. B. Henriques, Koichi Ito, Christoph Hauert, Michael Doebeli. 2021. PLOS Computational Biology (17-2): e1008733 .\n\n\nEvolution of honest reward signal in flowers\nKoichi Ito, Miki F. Suzuki, Ko Mochizuki, 2021. Proceedings of the Royal Society B (288): 20202848.\n\n\nThe joint evolution of cooperation and competition\nKoichi Ito, Michael Doebeli, 2019. Journal of Theoretical Biology (480): 1-12.\n\n\nOptimal foraging by herbivores maintains polymorphism in defence in a natural plant population\nYasuhiro Sato†, Koichi Ito†, Hiroshi Kudoh, 2017. Functional Ecology (31-12): 2233-2243. † equal contribution\n\n\nThe evolution of cooperation by negotiation in a noisy world\nKoichi Ito, John McNamara, Atsushi Yamauchi, Andrew Higginson, 2016. Journal of Evolutionary Biology (30-3): 603-615.\n\n\nRelationship between aggregation of rewards and the possibility of polymorphism in continuous snowdrift games\nKoichi Ito, Hisashi Ohtsuki, Atsushi Yamauchi, 2015. Journal of Theoretical Biology (372):47-53.\n\n\nTheoretical study of evolution of polymorphism in the level of anti-herbivore defense in plants\nKoichi Ito, Atsushi Yamauchi, 2011. Journal of Plant Interactions (6):183-184."
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "研究紹介",
-    "section": "",
-    "text": "No matching items"
   }
 ]
