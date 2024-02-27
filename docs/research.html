@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.537">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -153,7 +153,7 @@ window.Quarto = {
 <span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:mail.marvinschmitt@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+    <a class="nav-link" href="mailto:koichi.ito.bio@outlook.com"> <i class="bi bi-envelope" role="img" aria-label="email">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -204,7 +204,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="これまでの研究例の紹介">これまでの研究例の紹介</h2>
 <div id="listing-research-list" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-listing-file-modified-sort="1704700825370" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<div class="quarto-post image-left" data-index="0" data-listing-file-modified-sort="1709017557940" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
 <div class="thumbnail">
 <p><a href="./research/shark_swim_time.html" class="no-external"></a></p><a href="./research/shark_swim_time.html" class="no-external">
 <p class="card-img-top"><img src="research\shark_swim_time\shark.jpg"  class="thumbnail-image card-img"/></p>
@@ -226,7 +226,7 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="1" data-listing-file-modified-sort="1704702036673" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="quarto-post image-left" data-index="1" data-listing-file-modified-sort="1709017560025" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
 <div class="thumbnail">
 <p><a href="./research/floral_color_change.html" class="no-external"></a></p><a href="./research/floral_color_change.html" class="no-external">
 <p class="card-img-top"><img src="research\floral_color_change\Weigela_coraeensis_10_small.jpg"  class="thumbnail-image card-img"/></p>
@@ -248,7 +248,7 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="2" data-listing-file-modified-sort="1704701485424" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<div class="quarto-post image-left" data-index="2" data-listing-file-modified-sort="1709017611120" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
 <div class="thumbnail">
 <p><a href="./research/cooperation.html" class="no-external"></a></p><a href="./research/cooperation.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -270,7 +270,7 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="3" data-listing-file-modified-sort="1704701057572">
+<div class="quarto-post image-left" data-index="3" data-listing-file-modified-sort="1709017560028">
 <div class="thumbnail">
 <p><a href="./research/hamushi_associational_resistance.html" class="no-external"></a></p><a href="./research/hamushi_associational_resistance.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -464,7 +464,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
