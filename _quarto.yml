@@ -21,8 +21,9 @@ website:
         href: index_en.qmd
       - icon: envelope
         aria-label: email
-        href: "mailto:mail.marvinschmitt@gmail.com"  
+        href: "mailto:koichi.ito.bio@outlook.com"  
   search: false
+
 
 format:
   html:
