@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.537">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,6 +76,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../lab.html"> 
+<span class="menu-text">研究室</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../research.html"> 
 <span class="menu-text">研究内容</span></a>
   </li>  
@@ -94,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:mail.marvinschmitt@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+    <a class="nav-link" href="mailto:koichi.ito.bio@outlook.com"> <i class="bi bi-envelope" role="img" aria-label="email">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -147,11 +151,11 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>面白いことに、花色が変化した後の花には、報酬の量が少ないことが報告されています。つまり、わざわざ花が「色を変えて」、報酬がなくなったことを送粉者に伝えているような振る舞いをしているわけです。</p>
-<p>このような、「正直に報酬がなくなったことを知らせている」ように見える現象は他にも知られています。例えば、ヨーロッパキイチゴやアブラナ科の仲間の一部は、蜜の有無に応じて花の香りを変えることが知られています。また、花の中には、</p>
+<p>このような、「正直に報酬がなくなったことを知らせている」ように見える現象は他にも知られています。例えば、ヨーロッパキイチゴやアブラナ科の仲間の一部は、蜜の有無に応じて花の香りを変えることが知られています。また、花の中には花蜜自体に色を付けることで「送粉者が蜜の有無を見分けやすくしている」ように見える植物もいます。</p>
 </section>
 <section id="送粉者へのシグナル" class="level2">
 <h2 class="anchored" data-anchor-id="送粉者へのシグナル">送粉者への「シグナル」？</h2>
-<p>なぜこのようなことをするのでしょうか？　一つの説明は、送粉者からの評判の維持です。送粉者の中には、花の報酬の有無を花の色が匂い、位置などの情報と関連付けて学習できる仲間がいます。</p>
+<p>なぜこのようなことをするのでしょうか？　一つの説明は、送粉者からの評判の維持です。送粉者の中には、花の色や匂いで「どの花に報酬があるか」を学習する仲間がいます。報酬がなくなった花の色や匂いを変えることで、</p>
 
 
 </section>
@@ -318,7 +322,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

@@ -10,6 +10,8 @@ website:
     left:
       - text: "Home"
         href: index.qmd
+      - text: "研究室"
+        href: lab.qmd
       - text: "研究内容"
         href: research.qmd
       - text: "業績"
