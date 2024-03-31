@@ -1,6 +1,6 @@
 ---
 title: "伊藤公一"
-subtitle: "北海道大学環境科学院 特任助教" 
+subtitle: "同志社大学理工学部　環境システム学科　准教授" 
 about:
   id: hero-heading
   template: jolla
@@ -15,7 +15,8 @@ about:
 :::
 
 ## 経歴
-- 2022年-現在　北海道大学地球環境科学研究院 特任助教
+- 2024年-現在　同志社大学理工学部環境システム学科 准教授"
+- 2022-2024年　北海道大学地球環境科学研究院 特任助教
 - 2021-2022年　北海道大学人獣共通感染症国際共同研究所バイオインフォマティクス部門 研究員 (PI: 大森亮介)
 - 2017-2021年　カナダ　ブリティッシュコロンビア大学動物学部　研究員 (PI: Michael Doebeli)
 - 2016-2017年　イギリス　エクセター大学生命環境カレッジ 研究員 (PI: Andrew Higginson)
@@ -30,6 +31,6 @@ about:
 - 2015年-現在　種生物学会　
 
 ## Contact
-{{< fa envelope >}} koichi.ito [at] ees.hokudai.ac.jp
+{{< fa envelope >}} koito [&Alpha;&Tau;] mail.doshisha.ac.jp
 
-{{< fa envelope >}} koichi.ito.bio [at] outlook.com
+{{< fa envelope >}} koichi.ito.bio [&Alpha;&Tau;] outlook.com
