@@ -1,6 +1,10 @@
 project:
   type: website
 
+format:
+  html:
+    theme: zephyr
+
 website:
   title: "Koichi Ito web site"
   navbar:
@@ -23,7 +27,3 @@ website:
         href: "mailto:koichi.ito.bio@outlook.com"  
   search: false
 
-
-format:
-  html:
-    theme: zephyr
