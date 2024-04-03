@@ -2,22 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hmito.github.io/research.html</loc>
-    <lastmod>2024-04-01T04:14:57.644Z</lastmod>
+    <lastmod>2024-04-03T08:58:25.248Z</lastmod>
   </url>
   <url>
-    <loc>https://hmito.github.io/publication.html</loc>
-    <lastmod>2024-04-01T04:14:57.644Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hmito.github.io/index_en.html</loc>
-    <lastmod>2024-04-01T04:14:57.635Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hmito.github.io/index.html</loc>
-    <lastmod>2024-04-01T04:14:57.634Z</lastmod>
+    <loc>https://hmito.github.io/research/hamushi_associational_resistance.html</loc>
+    <lastmod>2024-04-03T08:58:23.458Z</lastmod>
   </url>
   <url>
     <loc>https://hmito.github.io/program.html</loc>
-    <lastmod>2024-04-01T04:14:57.643Z</lastmod>
+    <lastmod>2024-04-03T08:58:20.446Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/index_en.html</loc>
+    <lastmod>2024-04-03T08:58:18.860Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/index.html</loc>
+    <lastmod>2024-04-03T08:58:17.726Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/lab.html</loc>
+    <lastmod>2024-04-03T08:58:19.733Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/publication.html</loc>
+    <lastmod>2024-04-03T08:58:21.310Z</lastmod>
   </url>
 </urlset>
