@@ -5,10 +5,10 @@ title: "業績"
 [\[Koichi Ito - Google Scholar Citation\]](https://scholar.google.com/citations?hl=ja&view_op=list_works&gmla=AJsN-F6NanGQGUoTvjhhZLwxZxz03Q75J6xV7lIsD5oyKKcyCX0COH9t614j5E59fx-Q1iEfGOqTxJEFfqZ1qO3IZLDv-DyxkUGl2QKNPUr7yqrEijjoBqdH4zneP8S7xUgKKYdFGk8-15AsWAfJTXyhu91cD79Owg&user=YAl7gAYAAAAJ)
 
 ##### [Human movement decisions during Coronavirus Disease 2019](https://doi.org/10.48550/arXiv.2304.14488)
-Ryosuke Omori, Koichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Yoh Iwasa. 2023. (under review).
+Ryosuke Omori, Koichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Yoh Iwasa. 2023. Journal of Theoretical Biology (585): 111795.
 
 ##### [Time changes of customer behavior on accommodation reservation: a case study of Japan](https://doi.org/10.1007/s13160-023-00623-5)
-Koichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Ryosuke Omori. 2023. Japan Journal of Industrial and Applied Mathematics (in print).
+Koichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Ryosuke Omori. 2023. Japan Journal of Industrial and Applied Mathematics.
 
 ##### [Competition model explains trends of long‐term fertilization in plant communities](https://doi.org/10.1002/ece3.9832)
 Atsushi Yamauchi, Koichi Ito, Shota Shibasaki. 2023. Ecology and Evolution (13-2): e9832.
