@@ -4,8 +4,14 @@ title: "業績"
 
 [\[Koichi Ito - Google Scholar Citation\]](https://scholar.google.com/citations?hl=ja&view_op=list_works&gmla=AJsN-F6NanGQGUoTvjhhZLwxZxz03Q75J6xV7lIsD5oyKKcyCX0COH9t614j5E59fx-Q1iEfGOqTxJEFfqZ1qO3IZLDv-DyxkUGl2QKNPUr7yqrEijjoBqdH4zneP8S7xUgKKYdFGk8-15AsWAfJTXyhu91cD79Owg&user=YAl7gAYAAAAJ)
 
-##### [Human movement decisions during Coronavirus Disease 2019](https://doi.org/10.48550/arXiv.2304.14488)
-Ryosuke Omori, Koichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Yoh Iwasa. 2023. Journal of Theoretical Biology (585): 111795.
+##### [Specialism and generalism in social animals in variable environments](https://doi.org/10.1098/rstb.2023.0264)
+Koichi Ito, Andrew Higginson. 2025. Philosophical Transactions of the Royal Siciety B (380): 20230264.
+
+##### [Geographic distribution of needle litter microfungi in British Columbia  ](https://doi.org/10.48550/arXiv.2304.14488)
+Shunsuke Matsuoka, Koichi Ito, Takashi Osono. 2024. The Harris Science Review of Doshisha University (65-1): 8-16.
+
+##### [Human movement avoidance decisions during Coronavirus disease 2019 in Japan](https://doi.org/10.1016/j.jtbi.2024.111795)
+Ryosuke Omori, Koichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Yoh Iwasa. 2024. Journal of Theoretical Biology (585): 111795.
 
 ##### [Time changes of customer behavior on accommodation reservation: a case study of Japan](https://doi.org/10.1007/s13160-023-00623-5)
 Koichi Ito, Shunsuke Kanemitsu, Ryusuke Kimura, Ryosuke Omori. 2023. Japan Journal of Industrial and Applied Mathematics.
