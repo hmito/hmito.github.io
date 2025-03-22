@@ -1,6 +1,9 @@
 project:
   type: website
-  output-dir: docs
+
+format:
+  html:
+    theme: zephyr
 
 website:
   title: "Koichi Ito web site"
@@ -12,8 +15,8 @@ website:
         href: index.qmd
       - text: "研究室"
         href: lab.qmd
-      - text: "研究内容"
-        href: research.qmd
+#      - text: "研究内容"
+#        href: research.qmd
       - text: "業績"
         href: publication.qmd
       - text: "プログラミング"
@@ -26,6 +29,3 @@ website:
         href: "mailto:koichi.ito.bio@outlook.com"  
   search: false
 
-format:
-  html:
-    theme: zephyr

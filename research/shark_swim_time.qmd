@@ -2,7 +2,7 @@
 title: "サメと小魚の間の活動時間をめぐる「鬼ごっこ」"
 description: "サメは餌である小魚たちと鬼ごっこをしている？"
 order: 3
-draft: false
+draft: true
 ---
 
 ## サメの活動時間の多様性
