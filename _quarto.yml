@@ -19,6 +19,8 @@ website:
 #        href: research.qmd
       - text: "業績"
         href: publication.qmd
+#      - text: "資料"
+#        href: learning.qmd
       - text: "プログラミング"
         href: program.qmd
     right:

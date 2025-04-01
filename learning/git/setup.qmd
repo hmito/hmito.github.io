@@ -1,0 +1,83 @@
+---
+title: gitの環境準備
+format:
+  html:
+    toc: true
+---
+
+## アプリケーションの用意
+必要なアプリケーションを二つ、用意します。
+
+一つは、**Visual Studio Code** (以下VSCode)です。VSCodeは、エディタ（ソースコードを書くためのソフト）として極めて優秀ですが、ここでは、gitの管理用に用意します。
+
+::: {.panel-tabset}
+### Windowsの場合
+スタートメニューで**Power Shell**と検索し、出てきたアプリを実行してください。開いた画面で、以下のコマンドを入力し、最後にエンターキーを推してください。
+
+```bash
+winget install Microsoft.VisualStudioCode
+```
+
+![](src/powershell_vscode.png)
+
+:::{.callout-note}
+上手くいかなければ、以下のWebサイトからもインストール可能です。<br/>
+[https://code.visualstudio.com](https://code.visualstudio.com/)
+:::
+
+### Macの場合
+[homebrew](https://brew.sh)をインストール後、ターミナルで以下のコマンドを実行してください。
+
+```bash
+brew install --cask visual-studio-code
+```
+
+:::{.callout-note}
+上手くいかなければ、以下のWebサイトからもインストール可能です。<br/>
+[https://code.visualstudio.com](https://code.visualstudio.com/)
+:::
+
+:::
+
+もう一つは、gitを操作するために必要な**Git**アプリです。
+
+::: {.panel-tabset}
+
+### Windowsの場合
+**Power Shell**上で、以下のコマンドを入力し、最後にエンターキーを推してください。
+
+```bash
+winget install Git.Git
+```
+
+:::{.callout-note}
+上手くいかなければ、以下のWebサイトからもインストール可能です。<br/>
+[https://git-scm.com](https://git-scm.com/)
+:::
+
+### Macの場合
+ターミナルで以下のコマンドを実行してください。
+
+```bash
+brew install git
+```
+
+:::{.callout-note}
+上手くいかなければ、以下のWebサイトからもインストール可能です。<br/>
+[https://git-scm.com](https://git-scm.com/)
+:::
+
+:::
+
+## Visaual Studio Codeを設定する
+次に、VSCodeでGitを使うための設定を行います。左側のメニューから拡張機能ボタン（4つの四角マーク）を選び、検索窓から以下の2つを検索し、インストールを押してください。
+
+- **Git Graph** : gitの更新履歴等を見るために使用。
+- **Japanese Language Pack for Visual Studio Code** : VSCodeを日本語化するための拡張機能（必須ではない）。インストール後、右下の再起動するを選ぶ。
+
+VSCode起動後、左側に表示される「三つの丸が二つのカーブで結ばれているボタン」を押す。Windowsであれば、もしgitが入っていなければ、「Windows用Gitのダウンロード」と表示されるので、それを押せば落とせる。あるいは、[https://gitforwindows.org/](https://gitforwindows.org/)からも落とせる。上記Power Shell上で以下のコマンドを実行してもよい。
+
+
+## アカウントの用意
+まずは、gitサーバーの
+
