@@ -1,0 +1,77 @@
+---
+title: VSCodeの使い方
+format:
+  html:
+    toc: true
+execute: 
+  eval: false
+---
+
+**Visual Studio Code** (以下VSCode)は、エディタ（ソースコードを書くためのソフト）の一種です。以下のような特徴を持つことから、現在幅広く使われています。- Windows、macOS、Linuxなど、環境を問わず無料で利用可能 - ほとんどのプログラミング言語に対応 - プログラムの記述、実行、デバッグ、ソースコード管理なまで、一通りの機能がそろっている - 拡張機能をはじめ、カスタマイズ性が高い - 軽量で、動作が非常に高速このページでは、**Visual Studio Code**のインストールから簡単な使い方まで、一通り解説します。
+
+## インストール
+
+[公式Webサイト](https://code.visualstudio.com/)からインストーラーをダウンロードしてきてもよいですが、以下のような`winget`（Windows）あるいは`brew`（macOS）を使ったインストールが簡単です。
+
+::: panel-tabset
+### Windowsの場合
+
+スタートメニューで**Power Shell**と検索し、出てきたアプリを実行してください。開いた画面で、以下のコマンドを入力し、最後にエンターキーをおしてください。
+
+```{bash}
+winget install Microsoft.VisualStudioCode
+```
+
+![](vscode/rsc/powershell_vscode.png)
+
+### Macの場合
+
+[homebrew](https://brew.sh)をインストール後、ターミナルで以下のコマンドを入力し、最後にエンターキーをおしてください。
+
+```{bash}
+brew install --cask visual-studio-code
+```
+:::
+
+:::{.callout-note}
+上手くいかなければ、以下のWebサイトからもインストール可能です。<br/>
+[https://code.visualstudio.com](https://code.visualstudio.com/)
+:::
+
+上手くインスト―スできれいれば、Power Shell、またはターミナル上で以下のコマンドを入力し、最後にエンターキーを押すことで、VSCodeが立ち上がるはずです。
+```{bash}
+code
+```
+
+![](vscode/rsc/initial.png)
+
+:::{.callout-note}
+もちろん、スタートメニューやアプリ一覧から開いてもかまいません。
+:::
+
+## 日本語化
+デフォルトでは英語表示なので、日本語化しましょう。左側のメニューから拡張機能ボタン（4つの四角マーク）を選びます。検索窓で**Japanese**を検索し、出てきた一番上の**Japanese Language Pack for Visual Studio Code**のinstallボタンをクリックします。
+
+![](vscode/rsc/ext_japanese.png)
+
+すると、右下に言語設定を変えて再起動するか尋ねてくるポップアップが出るので、青いボタンを押します。
+![](vscode/rsc/ext_japanese_ok.png)
+
+これで、表示が日本語に切り替わったはずです。
+
+:::{.callout-note}
+上記でうまく日本語化できない場合、**Japanese Language Pack for Visual Studio Code**のインストール後、VSCode上部の検索窓に 「> display」と入力し、出てきた候補から「Configure Display Language」を選択し、日本語を選んでみてください。
+![](vscode/rsc/ext_japanese_config.png)
+:::
+
+## 初期設定
+次にVSCodeの表示の初期設定を行います。この辺りは好みがあるので、飛ばしてもかまいません。
+
+
+## 基本操作
+
+
+## 拡張機能
+次に、VSCodeでGitを使うための設定を行います。
+
+VSCodeは、拡張機能と呼ばれるアドインを入れることで、より使いやすくなります。まず、拡張機能**Git Graph**を入れましょう。これは、Gitの更新履歴をより視覚的に分かりやすくしてくれます。左側のメニューから拡張機能ボタン（4つの四角マーク）を選びdwqwます。検索窓で**Git Graph**を検索し、出てきた一番上の機能を拡張機能をインストールを押してください。dvs

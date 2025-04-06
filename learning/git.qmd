@@ -8,6 +8,8 @@ gitの入門サイトなどを見ると、ターミナルにコマンドを入�
 
 1. [gitの考え方](git/concept.qmd)
 1. [git環境を用意する](git/setup.qmd)
-1. [コミットする](git/commit.qmd)
-1. [ブランチを理解する](git/branch.qmd)
+1. [コミットと履歴](git/commit.qmd)
+1. [ブランチ](git/branch.qmd)
 1. [サーバーとの同期](git/pullpush.qmd)
+1. [便利な機能](git/useful.md):stash,resetの違い,tag,cherrypick
+1. [実践的な使い方](git/gitflow.md)
