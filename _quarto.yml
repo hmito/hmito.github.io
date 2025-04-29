@@ -30,4 +30,5 @@ website:
         href: "mailto:koichi.ito.bio@outlook.com"  
   search: false
 
-
+#for publish
+# quarto publish gh-pages
