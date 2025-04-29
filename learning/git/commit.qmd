@@ -1,0 +1,24 @@
+---
+title: コミットと履歴
+format:
+  html:
+    toc: true
+execute: 
+  eval: false
+---
+
+は自動ではなく手動です。一見不便に思うかもしれませんが作業の区切り毎に変更内容を整理して履歴として保存するためです。
+
+
+```{=html}
+<div class="prev-next-link">
+  <a class="prev-link" href="setup.html">
+    <p class="prev-next-label">prev</p>
+    <p>環境構築</p>
+  </a>
+  <a class="next-link" href="branch.html">
+    <p class="prev-next-label">next</p>
+    <p>ブランチ</p>
+  </a>
+</div>
+```
