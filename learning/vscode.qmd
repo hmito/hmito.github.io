@@ -12,15 +12,15 @@ execute:
 #| eval: false
 ```
 
-**[Visual Studio Code](https://code.visualstudio.com/)** (以下VSCode)は、エディタ（ソースコードを書くためのソフト）の一種です。以下のような特徴を持つことから、現在幅広く使われています。
+[**Visual Studio Code**](https://code.visualstudio.com/) (以下VSCode)は、エディタ（ソースコードを書くためのソフト）の一種です。以下のような特徴を持つことから、現在幅広く使われています。
 
-- Windows、macOS、Linuxなど、環境を問わず無料で利用可能 
-- txtはもちろん、R、Python、C++、md、htmlなどほとんどの言語・ファイル形式に対応 
-- プログラムの記述、実行、デバッグ、ソースコード管理なまで、一通りの機能がそろっている 
-- 拡張機能をはじめ、カスタマイズ性が高い 
-- 軽量で、動作が非常に高速
- 
- このページでは、**Visual Studio Code**のインストールから簡単な使い方まで、一通り解説します。
+-   Windows、macOS、Linuxなど、環境を問わず無料で利用可能
+-   txtはもちろん、R、Python、C++、md、htmlなどほとんどの言語・ファイル形式に対応
+-   プログラムの記述、実行、デバッグ、ソースコード管理なまで、一通りの機能がそろっている
+-   拡張機能をはじめ、カスタマイズ性が高い
+-   軽量で、動作が非常に高速
+
+このページでは、**Visual Studio Code**のインストールから簡単な使い方まで、一通り解説します。
 
 ## インストール
 
@@ -46,12 +46,12 @@ brew install --cask visual-studio-code
 ```
 :::
 
-:::{.callout-note}
-上手くいかなければ、以下のWebサイトからもインストール可能です。<br/>
-[https://code.visualstudio.com](https://code.visualstudio.com/)
+::: callout-note
+上手くいかなければ、以下のWebサイトからもインストール可能です。<br/> [https://code.visualstudio.com](https://code.visualstudio.com/)
 :::
 
 上手くインスト―スできれいれば、Power Shell、またはターミナル上で以下のコマンドを入力し、最後にエンターキーを押すことで、VSCodeが立ち上がるはずです。
+
 ```{bash}
 code
 ```
@@ -61,36 +61,31 @@ code
 もちろん、スタートメニュー（Windows）やアプリ一覧から開いてもかまいません。
 
 ## 日本語化
+
 デフォルトでは英語表示なので、日本語化しましょう。左側のメニューから拡張機能ボタン（4つの四角マーク）を選びます。検索窓で**Japanese**を検索し、出てきた一番上の**Japanese Language Pack for Visual Studio Code**のinstallボタンをクリックします。
 
 ![](vscode/rsc/ext_japanese.png)
 
-すると、右下に言語設定を変えて再起動するか尋ねてくるポップアップが出るので、青いボタンを押します。
-![](vscode/rsc/ext_japanese_ok.png)
+すると、右下に言語設定を変えて再起動するか尋ねてくるポップアップが出るので、青いボタンを押します。 ![](vscode/rsc/ext_japanese_ok.png)
 
 これで、表示が日本語に切り替わったはずです。
 
-:::{.callout-note}
-上記でうまく日本語化できない場合、**Japanese Language Pack for Visual Studio Code**のインストール後、VSCode上部の検索窓に 「> display」と入力し、出てきた候補から「Configure Display Language」を選択し、日本語を選んでみてください。
-![](vscode/rsc/ext_japanese_config.png)
+::: callout-note
+上記でうまく日本語化できない場合、**Japanese Language Pack for Visual Studio Code**のインストール後、VSCode上部の検索窓に 「\> display」と入力し、出てきた候補から「Configure Display Language」を選択し、日本語を選んでみてください。 ![](vscode/rsc/ext_japanese_config.png)
 :::
 
 ## 使ってみる
+
 それでは早速使ってみましょう。VSCodeは、メモ帳のように単体のファイルを開くこともできますが、通常はフォルダ（ディレクトリ）を単位として開きます。これは、プログラミングでは複数のファイルを同時に扱うことが多いためです。
 
-上部メニューの「ファイル」から「フォルダーを開く」を選択し、目的のフォルダを選択することでそのフォルダを開くことができます（ようこそ、の画面が開かれていれば、ここにある「フォルダーを開く」から開いてもかまいません）。
-![](vscode/rsc/open_folder.png){width=75%}
+上部メニューの「ファイル」から「フォルダーを開く」を選択し、目的のフォルダを選択することでそのフォルダを開くことができます（ようこそ、の画面が開かれていれば、ここにある「フォルダーを開く」から開いてもかまいません）。 ![](vscode/rsc/open_folder.png){width="75%"}
 
 ここでは、 Koten と名付けたフォルダを新たに作成し、開いてみます。Windowsの場合、右クリックから「新規作成」→「フォルダ」の順で選び、作成したフォルダを選択した状態で「フォルダを選択」を押します。
 
-:::{layout-ncol=2}
-
+::: {layout-ncol="2"}
 ![](vscode/rsc/create_folder.png)
 
 ![](vscode/rsc/create_folder2.png)
-
 :::
 
-上手くいけば、左サイドバーに KOTEN とフォルダ名が書かれているはずです。
-![](vscode/rsc/open_folder2.png){width=75%}
-
+上手くいけば、左サイドバーに KOTEN とフォルダ名が書かれているはずです。 ![](vscode/rsc/open_folder2.png){width="75%"}
