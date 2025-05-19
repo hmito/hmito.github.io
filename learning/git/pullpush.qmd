@@ -1,5 +1,5 @@
 ---
-title: ローカルとサーバー
+title: サーバーとの同期
 format:
   html:
     toc: true

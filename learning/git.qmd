@@ -13,8 +13,8 @@ gitの入門サイトなどを見ると、小難しいコマンドをターミ�
 
 1. [gitの考え方](git/concept.qmd)
 1. [環境構築](git/setup.qmd)
-1. [コミットと履歴](git/commit.qmd)
+1. [コミットと変更履歴](git/commit.qmd)
 1. [ブランチ](git/branch.qmd)
-1. [ローカルとサーバー](git/pullpush.qmd)
+1. [サーバーとの同期](git/pullpush.qmd)
 1. [様々な操作](git/useful.md):stash,resetの違い,tag,cherrypick
 1. [実践的な使い方](git/gitflow.md):gitflow、ignore、module

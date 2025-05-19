@@ -1,5 +1,5 @@
 ---
-title: コミットと履歴
+title: コミットと変更履歴
 format:
   html:
     toc: true

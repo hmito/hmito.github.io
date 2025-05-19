@@ -118,7 +118,7 @@ Continueを押した後は、指示に従いましょう。画像認証後、メ
   </a>
   <a class="next-link" href="commit.html">
     <p class="prev-next-label">next</p>
-    <p>コミットと履歴</p>
+    <p>コミットと変更履歴</p>
   </a>
 </div>
 ```
