@@ -3,7 +3,7 @@ title: git入門
 format:
   html:
     toc: true
-execute: 
+execute:
   eval: false
 ---
 
@@ -16,5 +16,5 @@ gitの入門サイトなどを見ると、小難しいコマンドをターミ�
 1. [コミットと変更履歴](git/commit.qmd)
 1. [ブランチ](git/branch.qmd)
 1. [サーバーとの同期](git/pullpush.qmd)
-1. [様々な操作](git/useful.md):stash,resetの違い,tag,cherrypick
+1. [様々な操作](git/useful.md)
 1. [実践的な使い方](git/gitflow.md):gitflow、ignore、module
