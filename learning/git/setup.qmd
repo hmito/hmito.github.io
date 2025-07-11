@@ -86,9 +86,15 @@ git config --global user.email "mail_adress@mail.com"
 
 ![](rsc/autofetch2.png)
 
-すると、「Git: Autofetch」という項目が出てくるので、trueを選択しておきましょう。特に保存ボタンとうはないので、このまま設定画面は消して構いません。
+すると、「Git: Autofetch」という項目が出てくるので、trueを選択しておきましょう。
 
-以上で、VSCodeの初期設定は完了です。
+同じく、設定画面上部にある検索窓に「Git Show Action Button 」と入力してください。
+
+![](rsc/autofetch3.png)
+
+3つのチェックボックスが並んでいる二つ目、「追跡リモートブランチがない場合に・・・)(publish)」と書かれている項目のチェックは外しておきましょう。
+
+以上で、VSCodeの初期設定は完了です。特に保存ボタンはないので、このまま設定画面は消して構いません。
 
 ## アカウントの用意
 
