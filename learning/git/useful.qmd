@@ -1,4 +1,4 @@
 
 ## stash
-## resetの違い
+## 3種類のreset
 ## tag
