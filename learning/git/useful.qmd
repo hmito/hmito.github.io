@@ -2,4 +2,3 @@
 ## stash
 ## 3種類のreset
 ## tag
-## delete branch
