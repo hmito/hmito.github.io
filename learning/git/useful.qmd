@@ -1,4 +1,29 @@
-
+---
+title: 便利な機能
+format:
+    html:
+        toc: true
+execute: 
+    eval: false
+---
+```{r}
+#| echo: false
+#| eval: false
+```
 ## stash
 ## 3種類のreset
 ## tag
+## ignore
+
+```{=html}
+<div class="prev-next-link">
+    <a class="prev-link" href="remote.html">
+        <p class="prev-next-label">prev</p>
+        <p>サーバーとの同期</p>
+    </a>
+<!--    <a class="next-link" href="branch.html">
+        <p class="prev-next-label">next</p>
+        <p>ブランチ</p>
+    </a> <!-- -->
+</div>
+```

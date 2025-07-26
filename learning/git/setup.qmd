@@ -3,7 +3,7 @@ title: 環境構築
 format:
     html:
         toc: true
-execute: 
+execute:
     eval: false
 ---
 ```{r}
@@ -165,6 +165,10 @@ Continueを押した後は、指示に従いましょう。画像認証後、メ
     <p class="prev-next-label">prev</p>
     <p>gitの考え方</p>
   </a>
+  <a class="up-link" href="../git.html">
+        <p class="prev-next-label">up</p>
+        <p>git入門</p>
+    </a>
   <a class="next-link" href="commit.html">
     <p class="prev-next-label">next</p>
     <p>コミットと変更履歴</p>

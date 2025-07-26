@@ -15,6 +15,7 @@ gitの入門サイトなどを見ると、小難しいコマンドをターミ�
 1. [環境構築](git/setup.qmd)
 1. [コミットと変更履歴](git/commit.qmd)
 1. [ブランチ](git/branch.qmd)
-1. [サーバーとの同期](git/pullpush.qmd)
-1. [使ってみる](git/howtouse.md)
-<!-- 1. [実践的な使い方](git/gitflow.md):ignore、module、pull request -->
+1. [マージとコンフリクト](git/merge.qmd)
+1. [サーバーとの同期](git/remote.qmd)
+1. [便利な機能](git/useful.md)
+<!-- 1. [実践的な使い方](git/gitflow.md):module、pull request -->
