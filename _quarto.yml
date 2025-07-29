@@ -3,8 +3,9 @@ project:
 
 format:
   html:
-    theme: zephyr
-
+    theme: 
+      - zephyr
+      - custom.scss
 website:
   title: "Koichi Ito web site"
   navbar:
@@ -19,8 +20,8 @@ website:
 #        href: research.qmd
       - text: "業績"
         href: publication.qmd
-      - text: "プログラミング"
-        href: program.qmd
+      - text: "資料"
+        href: learning.qmd
     right:
       - text: "English"
         href: index_en.qmd
@@ -29,3 +30,5 @@ website:
         href: "mailto:koichi.ito.bio@outlook.com"  
   search: false
 
+#for publish
+# quarto publish gh-pages

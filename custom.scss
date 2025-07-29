@@ -1,0 +1,55 @@
+/*-- scss:defaults --*/
+$h2-font-size:          1.6rem !default;
+$headings-font-weight:  500 !default;
+
+/*-- scss:rules --*/
+h1 {
+	font-size: 1.8rem;
+}
+h2 {
+	font-size: 1.4rem;
+}
+h3 {
+	font-size: 1.2rem;
+}
+h4 {
+	font-size: 1.1rem;
+}
+
+.prev-next-link a {
+	border-bottom: 1px #ddd solid;
+	display: block;
+	text-decoration: none;
+	padding: 10px 20px;
+	color: rgb(29, 117, 133);
+}
+.prev-next-link a:hover {
+	background-color: #f6f6f6;
+}
+.prev-next-link a:first-child {
+	border-top: 1px #ddd solid;
+}
+.prev-next-label {
+	font-size: 0.825rem;
+	color: #000;
+	margin-bottom: 10px;
+}
+/* Responsive */
+@media (min-width: 600px) {
+	.prev-next-link {
+		display: flex;
+	}
+	.prev-next-link a {
+		flex: 1;
+	}
+	.prev-next-link a,
+	.prev-next-link a:first-child {
+		border: none;
+	}
+	.up-link {
+		text-align: center;
+	}
+	.next-link {
+		text-align: right;
+	}
+}
