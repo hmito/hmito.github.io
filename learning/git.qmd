@@ -17,5 +17,5 @@ gitの入門サイトなどを見ると、小難しいコマンドをターミ�
 1. [ブランチ](git/branch.qmd)
 1. [マージとコンフリクト](git/merge.qmd)
 1. [サーバーとの同期](git/remote.qmd)
-1. [便利な機能](git/useful.md)
+1. [便利な機能](git/useful.qmd)
 <!-- 1. [実践的な使い方](git/gitflow.md):module、pull request -->
