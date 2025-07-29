@@ -4,7 +4,7 @@ description: "Faculty of Science and Engineering, Doshisha University, Associate
 about:
   id: hero-heading
   template: marquee
-  image: pic/top250322.jpg
+  image: rsc/top250322.jpg
 ---
 
 ### I'm on childcare leave until October 2025
