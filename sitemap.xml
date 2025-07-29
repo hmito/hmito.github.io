@@ -2,30 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hmito.github.io/research.html</loc>
-    <lastmod>2025-03-22T04:56:25.443Z</lastmod>
+    <lastmod>2025-04-29T04:46:07.744Z</lastmod>
   </url>
   <url>
     <loc>https://hmito.github.io/research/hamushi_associational_resistance.html</loc>
-    <lastmod>2025-03-22T04:56:25.444Z</lastmod>
+    <lastmod>2025-04-29T04:46:07.747Z</lastmod>
   </url>
   <url>
     <loc>https://hmito.github.io/program.html</loc>
-    <lastmod>2025-03-22T04:56:25.443Z</lastmod>
+    <lastmod>2025-07-29T08:51:13.070Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/vscode.html</loc>
+    <lastmod>2025-07-29T08:51:13.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git/useful.html</loc>
+    <lastmod>2025-07-29T08:51:13.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git/setup.html</loc>
+    <lastmod>2025-07-29T08:51:13.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git/merge.html</loc>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git/concept.html</loc>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git/branch.html</loc>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
   </url>
   <url>
     <loc>https://hmito.github.io/index_en.html</loc>
-    <lastmod>2025-03-22T05:32:35.115Z</lastmod>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
   </url>
   <url>
     <loc>https://hmito.github.io/index.html</loc>
-    <lastmod>2025-03-22T05:48:08.463Z</lastmod>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
   </url>
   <url>
     <loc>https://hmito.github.io/lab.html</loc>
-    <lastmod>2025-03-22T05:30:19.441Z</lastmod>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git/commit.html</loc>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git/gitflow.html</loc>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git/remote.html</loc>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git/usecase.html</loc>
+    <lastmod>2025-07-29T08:51:13.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning/git.html</loc>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hmito.github.io/learning.html</loc>
+    <lastmod>2025-07-29T08:51:12.962Z</lastmod>
   </url>
   <url>
     <loc>https://hmito.github.io/publication.html</loc>
-    <lastmod>2025-03-22T05:44:06.122Z</lastmod>
+    <lastmod>2025-04-29T04:46:07.743Z</lastmod>
   </url>
 </urlset>

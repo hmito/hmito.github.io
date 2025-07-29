@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>サーバーとの同期 – Koichi Ito web site</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Koichi Ito web site</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lab.html"> 
+<span class="menu-text">研究室</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publication.html"> 
+<span class="menu-text">業績</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../learning.html"> 
+<span class="menu-text">資料</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index_en.html"> 
+<span class="menu-text">English</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:koichi.ito.bio@outlook.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#なぜサーバーが必要か" id="toc-なぜサーバーが必要か" class="nav-link active" data-scroll-target="#なぜサーバーが必要か">なぜサーバーが必要か</a></li>
+  <li><a href="#ローカルとリモートの紐つけ" id="toc-ローカルとリモートの紐つけ" class="nav-link" data-scroll-target="#ローカルとリモートの紐つけ">ローカルとリモートの紐つけ</a>
+  <ul class="collapse">
+  <li><a href="#ケース1ローカルにすでにリポジトリがある" id="toc-ケース1ローカルにすでにリポジトリがある" class="nav-link" data-scroll-target="#ケース1ローカルにすでにリポジトリがある">ケース1：ローカルにすでにリポジトリがある</a></li>
+  <li><a href="#ケース2リモートにすでにリポジトリがある" id="toc-ケース2リモートにすでにリポジトリがある" class="nav-link" data-scroll-target="#ケース2リモートにすでにリポジトリがある">ケース2：リモートにすでにリポジトリがある</a></li>
+  <li><a href="#ケース3一から始める" id="toc-ケース3一から始める" class="nav-link" data-scroll-target="#ケース3一から始める">ケース3：一から始める</a></li>
+  </ul></li>
+  <li><a href="#同期プッシュとプル" id="toc-同期プッシュとプル" class="nav-link" data-scroll-target="#同期プッシュとプル">同期：プッシュとプル</a>
+  <ul class="collapse">
+  <li><a href="#同期はブランチ単位" id="toc-同期はブランチ単位" class="nav-link" data-scroll-target="#同期はブランチ単位">同期はブランチ単位</a></li>
+  <li><a href="#a.-ローカルよりリモートが先-pull" id="toc-a.-ローカルよりリモートが先-pull" class="nav-link" data-scroll-target="#a.-ローカルよりリモートが先-pull">A. ローカルよりリモートが先 → pull</a></li>
+  <li><a href="#b.-リモートよりローカルが先-push" id="toc-b.-リモートよりローカルが先-push" class="nav-link" data-scroll-target="#b.-リモートよりローカルが先-push">B. リモートよりローカルが先 → push</a></li>
+  <li><a href="#c.-ローカルとリモートが分岐-pull-push" id="toc-c.-ローカルとリモートが分岐-pull-push" class="nav-link" data-scroll-target="#c.-ローカルとリモートが分岐-pull-push">C. ローカルとリモートが分岐 → pull-push</a></li>
+  <li><a href="#d.-ローカルにブランチがない-checkout" id="toc-d.-ローカルにブランチがない-checkout" class="nav-link" data-scroll-target="#d.-ローカルにブランチがない-checkout">D. ローカルにブランチがない → checkout</a></li>
+  <li><a href="#e.-リモートにブランチがない-push" id="toc-e.-リモートにブランチがない-push" class="nav-link" data-scroll-target="#e.-リモートにブランチがない-push">E. リモートにブランチがない → push</a></li>
+  </ul></li>
+  <li><a href="#普段の操作の流れと注意点" id="toc-普段の操作の流れと注意点" class="nav-link" data-scroll-target="#普段の操作の流れと注意点">普段の操作の流れと注意点</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">サーバーとの同期</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>このページでは、ブランチにならぶ重要な機能であるサーバーとの同期についてみていきます。</p>
+<section id="なぜサーバーが必要か" class="level2">
+<h2 class="anchored" data-anchor-id="なぜサーバーが必要か">なぜサーバーが必要か</h2>
+<p>ここまで、gitを手元のPCの中だけで使用してきました。しかし、<strong>gitはオンラインサーバーと同期させながら使用するのが一般的</strong>です。</p>
+<p>サーバーを使うメリットは大きく以下の4つです。</p>
+<ul>
+<li>バックアップ：PCの記録が失われたとしても容易に復元可能。</li>
+<li>PC間の同期：複数のPCの間で、作業環境を同期。</li>
+<li>チーム開発：複数メンバーでの共同開発に際してコード・履歴を共有。</li>
+<li>公開：ソースコードやドキュメントを容易に一般公開・配布できる。</li>
+</ul>
+<p>サーバーは自前のものを用意することもできますが、一般には<a href="../../learning/git/concept.html">ホスティングサービス</a>と呼ばれるgitサーバーを利用します。</p>
+<p>※ 事前に<a href="../../learning/git/setup.html">環境構築</a>などを参考に、ホスティングサービスのアカウントを作成しておいてください。本ページでは、GitHubでの操作例を示します。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+オンラインストレージにgitリポジトリを作るのは危険
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>バックアップやPC間の同期が目的なら、OneDriveやGoogleDriveなどのオンラインストレージを使えばよいと思った人もいるかもしれません。</p>
+<p>しかし、オンラインストレージ内にgitリポジトリを作成するのはお勧めしません。これは、<strong>gitがオンラインストレージの同期機能と衝突し、最悪履歴の破損などが起きる可能性</strong>があるためです。</p>
+<p>gitリポジトリのバックアップ・PC間の同期は、素直にgitサーバーとの同期機能を使いましょう。変更のコンフリクトの解決などはgitのほうが高機能なので、PC間の同期に限ってもgitを使う価値はあります。</p>
+</div>
+</div>
+</section>
+<section id="ローカルとリモートの紐つけ" class="level2">
+<h2 class="anchored" data-anchor-id="ローカルとリモートの紐つけ">ローカルとリモートの紐つけ</h2>
+<p>gitでは、<strong>手元のPC環境をローカル、サーバー環境をリモート</strong>と呼びます。</p>
+<p>gitサーバーを利用する際には、まず<strong>ローカルとリモートを紐付ける作業</strong>が必要です。ケースごとに必要な操作を説明します。</p>
+<hr>
+<section id="ケース1ローカルにすでにリポジトリがある" class="level3">
+<h3 class="anchored" data-anchor-id="ケース1ローカルにすでにリポジトリがある">ケース1：ローカルにすでにリポジトリがある</h3>
+<p>手元のPCにはすでにリポジトリはあるが、途中でサーバーも利用したくなった場合、まず<strong>リモートにリポジトリを作成</strong>後、<strong>ローカルにリモートを登録</strong>します。</p>
+<ol type="1">
+<li>リモートに新しいリポジトリを作成する。
+<ol type="i">
+<li>githubの場合、トップページのメニューから「Repositories」を選び、「New」を押す。</li>
+<li>リポジトリ名を決める。半角英数字とアンダーバー、ハイフンのみ。</li>
+<li>コードを公開するか（Public）、非公開にするか（Private）を選択。どちらでも問題ない（下記参照）。</li>
+<li>画面下部の「Create repository」を押せば作成完了。</li>
+</ol></li>
+</ol>
+<p><img src="rsc/github_init1.png" class="img-fluid" width="500"></p>
+<p><img src="rsc/github_init2.png" class="img-fluid" width="500"></p>
+<ol start="2" type="1">
+<li>httpsから始まる<strong>リモートリポジトリのURL</strong>をコピー。
+<ul>
+<li>githubの場合、作成後に表示される画面に表示されている。右側のボタンを押せばコピー完了。</li>
+</ul></li>
+</ol>
+<p><img src="rsc/github_init3.png" class="img-fluid" width="500"></p>
+<ol start="3" type="1">
+<li>VSCodeに戻り、「ソース管理」画面の設定メニューから「リモート」→「リモートの追加」の順に選択</li>
+</ol>
+<p><img src="rsc/add_remote1.png" class="img-fluid" width="500"></p>
+<ol start="4" type="1">
+<li>画面上部にURLの入力を求められるので、コピーした<strong>リモートリポジトリのURL</strong>を入力し、「URLからリモートを追加する」を選択</li>
+</ol>
+<p><img src="rsc/add_remote2.png" class="img-fluid" width="500"></p>
+<ol start="5" type="1">
+<li>リモート名の入力を求められる。「github」などでも構わないが、慣習では「origin」とする。</li>
+<li>あとは、<a href="remote.html#e.-リモートにブランチがない-push">リモートにブランチがない</a>にそって同期したいブランチを順にリモートへとアップロード。</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+リポジトリはpublic? private?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>リポジトリの公開範囲、特に理由がなくとも「恥ずかしいから」とprivateとしておきたくなるところですが、publicと比較してのデメリットがいくつかあります。</p>
+<ul>
+<li><strong>サービスの制限</strong>：無料アカウントでは、privateリポジトリの利用に制限が課せられている場合がある（共同作業可能な人数、作成できる個数など）
+<ul>
+<li>2025年現在、GitHubにはprivateリポジトリに大きな制約はないが、しばしば条件は更新されるため、気になる場合は調べることをお勧めする</li>
+</ul></li>
+<li><strong>実績紹介の機会の喪失</strong>：GitHubはじめ、ホスティングサービスのアカウントは、「これまでどんなコードを書いてきたか」を証明する手段として使われる。非公開とすると、そうした実績が外部に見えず機会損失にもなる。</li>
+<li><strong>他者への貢献機会の喪失</strong>：どんなにくだらないコードに見えても、そのコードが他の誰かの参考になることも。</li>
+</ul>
+<p>もちろん、研究で使うコードを研究発表前に他者に公開するのはややリスクがある行為でもあります。すべてをpublicにする必要はありませんが、privateの方が常に良いわけではないことは押さえておきましょう。</p>
+<p>なお、「恥ずかしい」に関して言えば、GitHubにはすでに無数の「コードの練習用」のリポジトリが登録・公開されているので、あまり気にしても意味がないかもしれません。</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="ケース2リモートにすでにリポジトリがある" class="level3">
+<h3 class="anchored" data-anchor-id="ケース2リモートにすでにリポジトリがある">ケース2：リモートにすでにリポジトリがある</h3>
+<p>手元にコードはないが、どこかのサーバーにはすでにリポジトリが用意されている場合です。新しいPCで作業を始めるケース、他者が作成したプロジェクトを引き継ぐ場合などが該当します。この場合、<strong>ローカルにリモートリポジトリをダウンロードする「クローン Clone」という操作</strong>を行います。</p>
+<ol type="1">
+<li>まず、対象の<strong>リモートリポジトリのURL</strong>をコピー（自分または他人のリポジトリ）
+<ul>
+<li>githubの場合、リポジトリを開いた際に表示される「&lt;&gt; Code」ボタンを押すと、URLが表示される。</li>
+</ul></li>
+</ol>
+<p><img src="rsc/clone1.png" class="img-fluid" width="500"></p>
+<ol start="2" type="1">
+<li>VSCodeを<strong>フォルダを開いていない状態</strong>にする。すでにいずれかのフォルダを開いている場合、「ファイル」→「フォルダを閉じる」から閉じる。</li>
+<li>「ソース管理」を開き、「リポジトリをクローンする」を選択</li>
+<li>画面上部にURLの入力を求められるので、コピーした<strong>リモートリポジトリのURL</strong>を入力し、「リポジトリのURL」を選択</li>
+</ol>
+<p><img src="rsc/clone2.png" class="img-fluid" width="500"></p>
+<ol start="5" type="1">
+<li>クローンした<strong>リポジトリを置くフォルダを選択</strong>。なお、選択したフォルダ内に、リポジトリと同名のフォルダが作成され、その中にリポジトリの中身が配置されます。
+<ul>
+<li>例：<code>prj</code>フォルダを選択して<code>momotaro</code>リポジトリをクローンすると、リポジトリの中身は<code>prj/momotaro/</code>の中に置かれます。</li>
+</ul></li>
+<li>必要に応じて、<a href="remote.html#d.-ローカルにブランチがない-checkout">ローカルにブランチがない</a>にそって、リモートのブランチを落としてくる。</li>
+</ol>
+<hr>
+</section>
+<section id="ケース3一から始める" class="level3">
+<h3 class="anchored" data-anchor-id="ケース3一から始める">ケース3：一から始める</h3>
+<p>まだリモートにもローカルにもリポジトリがない、gitによる管理を新たに始めるケースです。すでに書きかけのコード等があってもかまいません。手順としては、ケース1とケース2の組み合わせ、すなわち「リモートリポジトリを作成」後「ローカルにクローン」</p>
+<ol type="1">
+<li>ケース1の手順1,2に従って、<strong>新たなリモートリポジトリを作成</strong>し、<strong>リモートリポジトリのURL</strong>をコピー</li>
+<li>ケース2の手順2,3,4,5に従って、<strong>リモートリポジトリをローカルにクローン</strong></li>
+<li><a href="remote.html#d.-ローカルにブランチがない-checkout">ローカルにブランチがない</a>にそって、リモートのmainブランチをローカルに落としてくる。</li>
+<li>すでに書きかけのコード等があれば、このタイミングでローカルにファイルを追加し、コミットする。</li>
+</ol>
+<p>新たに研究プロジェクトをスタートする場合、ひとまずリモートリポジトリを作成してクローンしてくる癖をつけておくと良いと思います。</p>
+</section>
+</section>
+<section id="同期プッシュとプル" class="level2">
+<h2 class="anchored" data-anchor-id="同期プッシュとプル">同期：プッシュとプル</h2>
+<section id="同期はブランチ単位" class="level3">
+<h3 class="anchored" data-anchor-id="同期はブランチ単位">同期はブランチ単位</h3>
+<p>リモートとローカルの<strong>同期は、ブランチ単位で管理</strong>されます。つまり、ローカルの「mainブランチ」とリモートの「mainブランチ」はそれぞれ個別にフォルダの状態が履歴上で管理されており、同期操作はこの二つのブランチ間で行われます。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+同期は手動？
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>コミット同様、<strong>同期も自動では行われず、手動で行う必要</strong>があります。これは、<strong>作業中にリモートからの同期によって作業環境が変わってしまう</strong>のを防ぐためです。例えば、共同作業をしている誰かがリモートのリポジトリ上でファイルを消すと、自動同期によって作業中の自分のファイルも消えてしまうかもしれません。</p>
+<p>手動であれば、後述するように変更のコンフリクトによって警告され、双方の変更のどちらを選ぶか（あるいはどちらも残すか）を選択することができます。</p>
+</div>
+</div>
+<p>GitGraphでは、以下のような3種類のブランチラベルでリモートとローカルのブランチが表示されます。</p>
+<ul>
+<li><img src="rsc/branchtag_local.png" height="30"><strong>「ブランチ名」</strong>：ローカルのブランチの状態</li>
+<li><img src="rsc/branchtag_remote.png" height="30"> <strong>「リモート名/ブランチ名」</strong>：リモートのブランチの状態</li>
+<li><img src="rsc/branchtag_both.png" height="30"> <strong>「ブランチ名|リモート名」</strong>：ローカルとリモートの状態が同じ＝すでに同期されている</li>
+</ul>
+<p>つまり、表示が<strong>三つ目以外であれば、そのブランチは何らかの同期操作が必要な状況</strong>といえます。リモートとローカルの同期に使う操作は二種類です。以下、状況ごとに必要な操作を説明します。</p>
+<ul>
+<li><strong>プル pull</strong>：リモートからローカルへコミットをダウンロード</li>
+<li><strong>プッシュ push</strong>：ローカルからリモートへコミットをアップロード</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+フェッチ Fetch：三つ目の操作
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>実は、同期にかかわる操作としては、フェッチ Fetchと呼ばれるものもあります。これは、リモートやローカルのブランチの状態を更新せず、リモートにおける現在のブランチ状況のみ取得してくる操作です。Webブラウザの更新ボタンとほぼ同じ位置づけです。</p>
+<p>フェッチは動作も軽いため、この解説では<a href="setup">環境構築</a>においてAuto Fetchとよばれる設定を行いました。これは定期的（デフォルトでは3分毎）にフェッチをバックグラウンドで行う操作です。</p>
+<p>もし、Auto Fetchによる自動更新を待てない場合、ソース管理の「…」ボタンから、手動でフェッチを行う行うこともできます。</p>
+<p><img src="rsc/fetch.png" class="img-fluid" width="500"></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="a.-ローカルよりリモートが先-pull" class="level3">
+<h3 class="anchored" data-anchor-id="a.-ローカルよりリモートが先-pull">A. ローカルよりリモートが先 → pull</h3>
+<p><img src="rsc/branchtag_pull.png" class="img-fluid" width="500"></p>
+<p>他の人（や他のPCからの操作で）リモートリポジトリが更新され、<strong>ローカルのファイル状態が古くなった</strong>ケースです。この場合、リモートからコミット情報をダウンロードする<strong>プル pull</strong>が必要です。</p>
+<ol type="1">
+<li>ローカルにおける当該ブランチを選択（ローカルブランチラベルをダブルクリック）</li>
+<li><strong>リモートブランチラベル</strong>を右クリックし、「Pull into current branch」を選択</li>
+<li>ポップアップが出るが、「Yes, pull」を選択</li>
+</ol>
+<hr>
+</section>
+<section id="b.-リモートよりローカルが先-push" class="level3">
+<h3 class="anchored" data-anchor-id="b.-リモートよりローカルが先-push">B. リモートよりローカルが先 → push</h3>
+<p><img src="rsc/branchtag_push.png" class="img-fluid" width="500"></p>
+<p>ローカルリポジトリ上でコミットを進めた結果、<strong>リモートのファイル状態が古くなった</strong>ケースです。この場合、ローカルからリモートへコミット情報をアップロードする<strong>プッシュ push</strong>が必要です。</p>
+<ol type="1">
+<li><strong>ローカルブランチラベル</strong>を右クリック し、「Push branch」を選択</li>
+<li>ポップアップが出るが、「Yes, push」を選択</li>
+</ol>
+<hr>
+</section>
+<section id="c.-ローカルとリモートが分岐-pull-push" class="level3">
+<h3 class="anchored" data-anchor-id="c.-ローカルとリモートが分岐-pull-push">C. ローカルとリモートが分岐 → pull-push</h3>
+<p><img src="rsc/branchtag_merge.png" class="img-fluid" width="500"></p>
+<p>ローカルとリモートの<strong>双方が更新された結果、履歴上で枝分かれしてしまった</strong>ケースです。この場合、<strong>先に プル pull</strong>を行い、<strong>分岐を解消してから プッシュ push</strong>を行うことが重要です。</p>
+<ol type="1">
+<li>ローカルにおける当該ブランチを選択（ローカルブランチラベルをダブルクリック）</li>
+<li><strong>リモートブランチラベル</strong>を右クリックし、「Pull into current branch」を選択</li>
+<li>ポップアップが出るが、「Yes, pull」を選択
+<ul>
+<li>コンフリクトがない（つまり双方で行われた編集に競合がない）場合、自動的にマージが行われる。</li>
+<li>コンフリクトがある場合、手動でのマージ操作が必要となる。<a href="merge.html#編集の競合コンフリクト">コンフリクトの解決方法</a>を参考に解決する。</li>
+</ul></li>
+<li>無事マージが完了すれば、<strong>ローカルブランチラベル</strong>を右クリックし、「Push branch」を選択</li>
+<li>ポップアップが出るが、「Yes, push」を選択</li>
+</ol>
+<p>まだリモートには反映したくない場合、手順4,5は省いて構いません。</p>
+<hr>
+</section>
+<section id="d.-ローカルにブランチがない-checkout" class="level3">
+<h3 class="anchored" data-anchor-id="d.-ローカルにブランチがない-checkout">D. ローカルにブランチがない → checkout</h3>
+<p>「リモート名/ブランチ名」というタグだけで、「ブランチ名」という同名のタグが見当たらない場合、そのブランチを触るためにはリモートからブランチを落としてくる必要があります。</p>
+<ol type="1">
+<li><strong>リモートブランチラベル</strong>をダブルクリック</li>
+<li>ポップアップが出るので「Checkout Branch」を選択</li>
+</ol>
+<hr>
+</section>
+<section id="e.-リモートにブランチがない-push" class="level3">
+<h3 class="anchored" data-anchor-id="e.-リモートにブランチがない-push">E. リモートにブランチがない → push</h3>
+<p>「ブランチ名」というタグだけで、「リモート名/ブランチ名」という同名のタグが見当たらない場合、リモートにまだブランチがプッシュされていません。プッシュの方法は通常と同じです。</p>
+<ol type="1">
+<li><strong>ローカルブランチラベル</strong>を右クリック し、「Push branch」を選択</li>
+<li>ポップアップが出るが、「Yes, push」を選択</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ボタン一つで同期
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ここまでGitGraph上でのプッシュ、プル操作について説明してきました。実は、これらの操作は「ソース管理」画面の「コミット」ボタンより簡単に行うことができます。すべての変更がコミットされると、ブランチの状況に応じて必要なプッシュ・プルを行う「変更の同期」ボタンへと切り替わります。下矢印がプル、上矢印やプッシュが必要なコミットの数を示しています。</p>
+<p><img src="rsc/syncbutton_both.png" height="50"></p>
+<p>しかし、この機能はボタン一つで操作できてしまうがゆえに、<strong>実際にブランチに対してどのような操作を行っているのか</strong>が非常に見えにくくなる欠点があります。複雑な操作を行うためには、ブランチが更新時にどのように動くか自体に慣れておく必要があるため、<strong>GitGraphの様子がボタンを見ただけで想像できるようになるまでは、このボタンは使わずGitGraph上での操作を練習することをお勧めします</strong>。</p>
+</div>
+</div>
+</section>
+</section>
+<section id="普段の操作の流れと注意点" class="level2">
+<h2 class="anchored" data-anchor-id="普段の操作の流れと注意点">普段の操作の流れと注意点</h2>
+<p>実際の開発時の流れは、以下のようになります。</p>
+<ol start="0" type="1">
+<li>もし新しいプロジェクトをスタートさせる、新しいPCで作業を開始するときは、リモートリポジトリをクローンする</li>
+<li>作業を開始するブランチに<strong>切り替え check out</strong>する</li>
+<li>リモートが進んでいる場合、可能であれば<strong>プル pull</strong>しておく</li>
+<li>編集作業を進め、ローカルリポジトリのコミットを進める</li>
+<li>作業がひと段落したら、プルの必要がないことを確認してから<strong>プッシュ push</strong>、またはリモートのいずれかのブランチに<strong>マージ merge</strong>しておく</li>
+</ol>
+<p>ポイントは、以下のような点です。</p>
+<ul>
+<li>競合が発生しない限りこまめにプル pullをしておく
+<ul>
+<li>頻繁なpullで、不必要な編集内容の競合：コンフリクトが発生することを防ぐことができます。</li>
+</ul></li>
+<li>作業がひと段落した段階で、変更内容をpush/mergeしておく
+<ul>
+<li>pushしていないコミットがたまると、他者がそれらの変更をpullできず不必要な編集内容の競合：コンフリクトを引き起こします</li>
+</ul></li>
+<li>リモートのブランチを直接操作することはできない
+<ul>
+<li>ブランチのマージなども、ローカルでいったんそれぞれのブランチを操作した後、pushしてリモートに反映する</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+複数人での共同作業
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>複数人で一つのプロジェクトを進める場合、それぞれが自由にリモートリポジトリを操作するためには、リポジトリのコラボレーターに登録する必要があります。</p>
+<p>GitHubの場合は、以下のように操作します。</p>
+<ol type="1">
+<li>GitHubにログインし、共同作業を行うリポジトリを開く</li>
+<li>Settingsのタブを押し、左メニューからCollaboratorsを選択</li>
+<li>画面の「Add people」ボタンから、相手のGitHubユーザー名、メールアドレスなどから検索し追加、またはメールで招待</li>
+</ol>
+<p><img src="rsc/collaborator.png" class="img-fluid"></p>
+<p>なお、複数人で共同作業をしても、他者のローカルのリポジトリの様子が見えることはありません。これは、個々のローカルはリモートとしかつながっていない（リモートを中心に個々のローカルが結びついている）ためです。</p>
+</div>
+</div>
+<div class="prev-next-link">
+    <a class="prev-link" href="merge.html">
+        <p class="prev-next-label">prev</p>
+        <p>マージとコンフリクト</p>
+    </a>
+    <a class="up-link" href="../git.html">
+        <p class="prev-next-label">up</p>
+        <p>git入門</p>
+    </a>
+    <a class="next-link" href="useful.html">
+        <p class="prev-next-label">next</p>
+        <p>便利な機能</p>
+    </a>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/hmito\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,10 +31,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-299fde5381b5a602aab895950093955a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -83,8 +83,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">業績</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./program.html" aria-current="page"> 
-<span class="menu-text">プログラミング</span></a>
+    <a class="nav-link" href="./learning.html"> 
+<span class="menu-text">資料</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -131,25 +131,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>C++の解説記事をいくつかQiita 上にて公開中です。特に以下の記事は、数値解析の際などに参考になるかもしれません。</p>
-<section id="cで常微分方程式入門" class="level4">
-<h4 class="anchored" data-anchor-id="cで常微分方程式入門"><a href="https://www.google.com/url?q=https%3A%2F%2Fqiita.com%2Fhmito%2Fitems%2F483445ac0d42fb4428a5&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw25JL7s9nzMo4-QzVKxrfPG">C++で常微分方程式入門</a></h4>
-<p>常微分方程式の数値解析用ライブラリ <code>boost::odeint</code> についての解説記事です。簡単につかえて、計算精度も計算速度もしっかり制御できる、非常に良くできたライブラリです。ルンゲクッタ法を自分で書くぐらいなら、ぜひ使うべきライブラリです。</p>
-</section>
-<section id="c20-スマートポインタ入門" class="level4">
-<h4 class="anchored" data-anchor-id="c20-スマートポインタ入門"><a href="https://qiita.com/hmito/items/9b35a2438a8b8ee4b5af">C++20 スマートポインタ入門</a></h4>
-<p>C++のメモリ管理の負担を軽減する、スマートポインタについての解説記事です。もし普段、動的メモリ確保、すなわち<code>malloc/free</code>や<code>new/delete</code>を書くことがあれば、この記事がお役に立てるかもしれません。C++11以降進化を続けてきたスマートポインタのC++20時代の使い方をまとめています。</p>
-</section>
-<section id="それポインタ使わなくてもできるよｃ言語のポインタとcの流儀" class="level4">
-<h4 class="anchored" data-anchor-id="それポインタ使わなくてもできるよｃ言語のポインタとcの流儀"><a href="https://qiita.com/hmito/items/44925fca9fca74e78f61">それ、ポインタ使わなくてもできるよ：Ｃ言語のポインタとC++の流儀</a></h4>
-<p>ポインタに注目して書いた、C言語ユーザーやC++ビギナーへのC++入門記事です。</p>
-</section>
-<section id="cで効率よく重複のない乱数列を生成する" class="level4">
-<h4 class="anchored" data-anchor-id="cで効率よく重複のない乱数列を生成する"><a href="https://qiita.com/hmito/items/9f4bdc8442b6f6b3c7bc">C++で効率よく重複のない乱数列を生成する</a></h4>
-<p>実際に利用する場合に最も速いのはどうすべきか？の視点から、重複なし乱数列の生成アルゴリズムについて解説しています</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -234,6 +217,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -344,6 +329,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

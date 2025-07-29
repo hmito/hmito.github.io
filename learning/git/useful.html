@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>便利な機能 – Koichi Ito web site</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Koichi Ito web site</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lab.html"> 
+<span class="menu-text">研究室</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publication.html"> 
+<span class="menu-text">業績</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../learning.html"> 
+<span class="menu-text">資料</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index_en.html"> 
+<span class="menu-text">English</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:koichi.ito.bio@outlook.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#コミット前の変更の一時退避スタッシュ-stash" id="toc-コミット前の変更の一時退避スタッシュ-stash" class="nav-link active" data-scroll-target="#コミット前の変更の一時退避スタッシュ-stash">コミット前の変更の一時退避：スタッシュ stash</a></li>
+  <li><a href="#ブランチの巻き戻しリセット-reset" id="toc-ブランチの巻き戻しリセット-reset" class="nav-link" data-scroll-target="#ブランチの巻き戻しリセット-reset">ブランチの巻き戻し：リセット reset</a></li>
+  <li><a href="#コミットにラベルを付けるtag" id="toc-コミットにラベルを付けるtag" class="nav-link" data-scroll-target="#コミットにラベルを付けるtag">コミットにラベルを付ける：tag</a></li>
+  <li><a href="#不要なファイルを無視するignore" id="toc-不要なファイルを無視するignore" class="nav-link" data-scroll-target="#不要なファイルを無視するignore">不要なファイルを無視する：ignore</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">便利な機能</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>このページでは、ここまで取りこぼしてきたgitの便利な機能を見ていきます。</p>
+<section id="コミット前の変更の一時退避スタッシュ-stash" class="level2">
+<h2 class="anchored" data-anchor-id="コミット前の変更の一時退避スタッシュ-stash">コミット前の変更の一時退避：スタッシュ stash</h2>
+<p>ブランチの切り替える際には、ファイルの変更ない（＝すべての変更がコミット済）である必要があります。しかし、以下のように<strong>コミット前にブランチを切り替えたい</strong>場合もしばしば存在します。</p>
+<ul>
+<li>コミット前に、他のブランチにおけるファイルの状態の確認したい</li>
+<li>ファイルを変更し始めたが、ブランチの選択が間違っていることに気づいた</li>
+</ul>
+<p>この場合、スタッシュ stashと呼ばれる操作で、一時的に変更内容を保存・退避する「一時的なコミット」のようなものを作ることができます。操作は以下の通りです。</p>
+<ol type="1">
+<li>コミット前の変更があると、GitGraph上では「Uncommitted Changes」と表示されるので、その部分を右クリックし、「Stash uncommitted changes」を選択</li>
+</ol>
+<p><img src="rsc/stash1.png" class="img-fluid" width="500"></p>
+<ol start="2" type="1">
+<li>ポップアップが出るので、適当なコミットメッセージに類するメッセージを書き、「Yes, stash」を選択</li>
+<li>これで、stashと書かれたラベルが新たに作成され、ファイルは変更前の状態に戻る。ブランチの切り替えなどをしてもstashは消えない</li>
+</ol>
+<p><img src="rsc/stash2.png" class="img-fluid" width="500"></p>
+<ol start="4" type="1">
+<li>ブランチの切り替えなどの作業が済めば、stashラベルを右クリックし、「Pop stash」を選択することで、元の「ファイルを変更したがコミットしていない」状態に戻せる
+<ul>
+<li>元のブランチ以外を選択した状態でもpopできる。よって、あるブランチで行ったコミット前の変更を、別のブランチに移動することができる</li>
+</ul></li>
+<li>stashが不要であれば、「Drop stash」で削除できる</li>
+</ol>
+<p><img src="rsc/stash3.png" class="img-fluid" width="500"></p>
+<p>注意点として、stashはローカル専用です。リモートには反映されないので、他のPCへstashの内容を送ることはできません。</p>
+</section>
+<section id="ブランチの巻き戻しリセット-reset" class="level2">
+<h2 class="anchored" data-anchor-id="ブランチの巻き戻しリセット-reset">ブランチの巻き戻し：リセット reset</h2>
+<p>すでにコミット済みの変更を取り消す方法として、リバート revertがありました。リバートは取消自体もコミットとして残る安全な方法ですが、以下のような場合、コミットしたこと自体も取り消したいかもしれません。</p>
+<ul>
+<li>複数のコミットに分散してしまったが、まとめてコミットしたい</li>
+<li>色々と変更しつつ進めたが、誤りに気付いたのでそれらのコミットごとなかったことにしたい</li>
+<li>間違ったブランチを進めてしまった</li>
+</ul>
+<p>このようなコミットした履歴自体の改ざんする方法としてリセット resetがあります。リセットの操作方法は以下の通りです。なお、履歴自体をないことにしてしまう操作であり、非常に危険である点に注意してください。</p>
+<ol type="1">
+<li>履歴を改ざんしたいブランチにHEADを移動（ブランチラベルをダブルクリック）</li>
+<li>戻りたい時点のコミットを右クリックし、「Reset current branch into this Commit」を選択</li>
+</ol>
+<p><img src="rsc/reset1.png" class="img-fluid" width="500"></p>
+<ol start="3" type="1">
+<li>ポップアップが出るので目的に応じて設定し、「Yes, reset」を選択
+<ul>
+<li>フォルダの状態まで元に戻したくない場合は、「Mixed」を選択</li>
+<li>フォルダの状態も含めて戻したい場合は、「Hard」を選択</li>
+</ul></li>
+</ol>
+<p>これで、ブランチラベルが当該コミットまで戻ります。「Mixed」を選んだ場合、ソース管理画面に、ファイルの変更内容がコミット前の状態で残されているはずです。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+リモートの操作は危険
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>リモートの環境は完全に他者と共有しています。このため複数人での<strong>共同作業時に、以下のような操作をリモート環境に反映するのは大変危険</strong>ですので絶対にやめましょう。</p>
+<ul>
+<li>ブランチを改名した</li>
+<li>ブランチを削除し、別の場所に新たに同名のブランチを作成した</li>
+<li>ブランチをリセットして巻き戻した</li>
+</ul>
+<p>これらの操作を行った場合、もし他の人がそれらのブランチをローカルに持っていた場合、履歴がつながらない形でリモートブランチが「ワープ」したことになり、大量のコンフリクトが発生し、最悪の場合進行中の作業が失われるなど深刻な結果を招きます。</p>
+<p><strong>resetを利用した履歴の改変は、あくまでpush前、ローカル環境だけでの操作にとどめましょう</strong>。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+履歴に残したブランチの巻き戻し方
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>危険を承知でどうしてもブランチの中身を巻き戻したい場合、「履歴を改変せず、コミットの形で変更を打ち消す」ことが重要です。つまりブランチ自体の位置を戻そうとするのではなく、ブランチを進めつつ中身を戻す、という方法です。</p>
+<p>このための方法の一つ目は、<a href="commit">コミットと変更履歴のページ</a>で触れたrevertです。これは特定のコミットを打ち消す新たなコミットを作成するため、比較的安全な方法です。戻りたい時点まで順に遡りながらrevertすればフォルダの状態を戻すことができます。しかし、この方法はコミットが複数にまたがっている場合でも一つ一つに対して操作が必要となります。</p>
+<p>そこで、もう一つの方法が リセット reset を活用した方法です。revertを活用するよりは危険性は高いですが、任意のコミットの時点までフォルダの状態を戻すことができます。もっとも、リセットの使用自体がリスクが高いので、十分注意して実行して下さい。</p>
+<ol type="1">
+<li>戻したいブランチがリモートブランチと同期されていることを確認する
+<ul>
+<li>この条件が満たされていないと、resetと同時に変更履歴が消えてしまいます</li>
+</ul></li>
+<li>戻りたいコミットまで<strong>hardでリセット</strong>をかける
+<ul>
+<li>これで、ローカルブランチのラベルがこのコミットに移動するはずです</li>
+<li>この操作で、ファイル状態は戻りたいコミットの状態まで戻ります</li>
+</ul></li>
+<li>再びリモートブランチのあるコミットまで、<strong>mixedでリセット</strong>をかける
+<ul>
+<li>再びローカルブランチのラベルがリモートブランチのラベルと一致した「同期状態」として表示されます</li>
+<li>ただし、mixedリセットなのでフォルダの状態は巻き戻らず、上記コミットの状態のままとなります</li>
+</ul></li>
+<li>コミットされていないファイルの変更（Uncommitted changes）が表示されているはずなので、全てステージしコミットする。コミットメッセージには、特定のコミットまでロールバックした旨を記載しておく。</li>
+</ol>
+<p>これで、ブランチの状態は進めつつ、特定のコミットの時点までフォルダの状態を巻き戻すことができた（一つのコミットでこれまでの変更をすべて打ち消すことができた）はずです。必要に応じてプッシュでリモートのブランチに反映してください。</p>
+</div>
+</div>
+</section>
+<section id="コミットにラベルを付けるtag" class="level2">
+<h2 class="anchored" data-anchor-id="コミットにラベルを付けるtag">コミットにラベルを付ける：tag</h2>
+<p>作業環境ではなく特定の「バージョン」のようなものを管理する場合、ブランチのようにコミットに従って移動していくのではなく、特定のコミットに紐付けて残しておきたいでしょう。</p>
+<p>このような、特定のコミットにつけるラベルをタグ tagといいます。作成は以下の通りです。</p>
+<ol type="1">
+<li>タグをつけたいコミットで右クリックし、「Add tag」を選択</li>
+<li>ポップアップにタグの名前を入力し、「Add Tag」を選択</li>
+<li>タグが履歴上に作成・表示される</li>
+<li>タグを削除する際は右クリックから「Delete tag」を、リモートにもプッシュしたい場合は「Push tag」を選ぶ
+<ul>
+<li>タグ作成時のポップアップで「push remote」にチェックを入れておけば、作成と同時にリモートリポジトリにも自動でプッシュされる</li>
+</ul></li>
+</ol>
+<p>なお、手順にもある通り、タグはそのままではローカルでしか見えないため、リモートにも反映するためにはpushの作業が必要です。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+タグの便利な機能
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>タグの便利な使い方を二つ紹介します。</p>
+<p>一つ目は、特定のバージョンのファイルの配布です。多くのホスティングサービスでは、特定のタグが付いたバージョンのファイルを表示させることができます。Githubでは以下の通りです。</p>
+<ol type="1">
+<li>GitHubにログインし、リポジトリを開く。</li>
+<li>「Code」タブからブランチ名をクリックし、「タグ」のタブを開いて求めるバージョンをクリック</li>
+</ol>
+<p><img src="rsc/tag_github.png" class="img-fluid" width="500"></p>
+<ol start="3" type="1">
+<li>これで特定のタグが付いたコミットのファイルが表示される。右上の「&lt;&gt; Code」ボタンからZipをダウロードすることもできる。
+<ul>
+<li>左クリックせず、右クリックすることでZipダウンロード用のURLも取得できる</li>
+</ul></li>
+</ol>
+<p><img src="rsc/tag_github2.png" class="img-fluid" width="500"></p>
+<p>二つ目は、研究の際の計算の管理です。シミュレーション等では、しばしばパラメータを変えながら大規模な計算を実施することがありますが、このような計算を「どのバージョンで行ったか」を記録しておくことは、あとで同じ結果を再現するためにも、バグが見つかった時に影響がないかを確認するためにも非常に重要です。</p>
+<p>そこで、大規模な計算を実施するごとにその計算に名前を付けておき、同名のタグをgit上でつけておきます。計算結果を入れるフォルダ名にも同じ名前を付ければ、あとから計算結果を見た際に「この結果はどのバージョンで計算したものか」を簡単に紐付けることができます。</p>
+</div>
+</div>
+</section>
+<section id="不要なファイルを無視するignore" class="level2">
+<h2 class="anchored" data-anchor-id="不要なファイルを無視するignore">不要なファイルを無視する：ignore</h2>
+<p>gitは特定のフォルダの中身を丸ごとリポジトリとして管理します。しかし、以下のようなファイルは管理対象とするのは避けるべきものです。</p>
+<ul>
+<li>コンパイル時の一時ファイルやログファイルのように、<strong>そもそも不要なファイル</strong></li>
+<li>VScodeの設定ファイルや、計算アプリRが出力するデータ「.RData」ファイルのように、<strong>そのPCで動作するには必要だが、他のPCには不必要なファイル</strong></li>
+<li>画像やバイナリファイルのように、<strong>Gitが同期するのが苦手な文字形式でない大量のファイル</strong></li>
+<li>.DS_StoreやThumbs.dbなど、<strong>OSが作成する隠しファイル</strong></li>
+</ul>
+<p>これらのファイルを、gitで管理してしまうと不要なファイルが同期されてしまいます。</p>
+<p>そこで、指定のファイルを同期から除外する機能、ignoreがあります。ignoreの設定方法は以下の通りです。</p>
+<ol type="1">
+<li>「ソース管理」画面の変更欄で、無視したいファイルを右クリックし、「.gitignoreに追加」を選択</li>
+</ol>
+<p><img src="rsc/ignore1.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>「.gitignore」という名称のファイルが変更されるので、通常の変更同様、ステージしてコミット</li>
+</ol>
+<p>.gitignoreの中身を見てみると、先ほどの無視したファイルのパスが書かれたただのテキストファイルであることがわかります。</p>
+<p><img src="rsc/ignore2.png" class="img-fluid"></p>
+<p>実は、無視するファイル類はこのファイルを直接テキストで編集するだけでも、登録することができます。以下のような特殊な表記を使うことで、より柔軟な指定が可能です。</p>
+<pre><code># 「#」で始まる行は無視される
+
+# 「/」で終わると、そのフォルダ内、という意味になる
+# 「png」フォルダの中身を無視する
+png/
+
+# 「*」はワイルドカードと呼ばれる「なんでも当てはまる部分」になる
+# 拡張子が「.dat」で終わるファイルをすべて無視する
+*.dat</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+計算結果の管理
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>研究では、大規模計算の結果をしばしば出力しますが、これらのデータはたいていgitが保存することが苦手なデータです。</p>
+<p>そこで、計算結果は丸ごとどこかのフォルダ（例えば「analysis」や「data」など）に出力し、そのフォルダの中身は丸ごと.gitignoreに登録してしまうと、便利です。これらのフォルダの中に、サブフォルダとして上で触れた「タグにする計算名」にしておけば、より管理が簡単かもしれません。</p>
+<p>なお、.gitignoreに登録したデータは当然バックアップされないので、他の手段（オンラインストレージなど）でバックアップ・同期を取るようにしておくと良いでしょう。</p>
+</div>
+</div>
+<div class="prev-next-link">
+    <a class="prev-link" href="remote.html">
+        <p class="prev-next-label">prev</p>
+        <p>サーバーとの同期</p>
+    </a>
+    <a class="up-link" href="../git.html">
+        <p class="prev-next-label">up</p>
+        <p>git入門</p>
+    </a>
+<!--    <a class="next-link" href="branch.html">
+        <p class="prev-next-label">next</p>
+        <p>ブランチ</p>
+    </a> <!-- -->
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/hmito\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
