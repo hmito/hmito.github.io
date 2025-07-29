@@ -61,7 +61,7 @@ VSCodeは、拡張機能と呼ばれるアドインを入れることで、よ�
 1. 検索窓で**Git Graph**（または**Git History**）を検索し、出てきた一番上の機能を拡張機能をインストールを押す。
 1. 表示されていた「インストール」の表示が消えれば完了。
 
-![](rsc/vscode_extension.png)
+![](rsc/vscode_extension.png){width=500}
 
 ## Gitの初期設定
 次に、Gitの初期設定を行います。
@@ -70,24 +70,24 @@ VSCodeは、拡張機能と呼ばれるアドインを入れることで、よ�
 1. 左メニューから丸三つが線でつながれた「ソース管理」のボタンを押し、「ソース管理」画面を開く
 1. 最初は「リポジトリを初期化する」と出てくるので、クリック（「Branchの発行」など違う表示が出てきた場合はこの手順は飛ばす）
 
-![](rsc/gitinit1.png)
+![](rsc/gitinit1.png){width=500}
 
 4. ソース管理画面の右上にある「・・・」をクリックし、「変更」以外のチェックを外す（「表示」「表示と並べ替え」など違う表示が出てきた場合はこの手順は飛ばす）
 
-![](rsc/gitinit1.5.png)
+![](rsc/gitinit1.5.png){width=500}
 
 
 5. ソース管理画面の右上に、縦線がいくつか並んでいる「View GitGraph」ボタンがあるのでこれを押して、「GitGraph」画面を開く。
     - おそらくこの時点では「コミットがない Unable to load commits」というエラーが出てくるが、無視して「Dismiss」を押してよい。
 
-![](rsc/gitinit2.png)
+![](rsc/gitinit2.png){width=500}
 
 6. GitGraph画面の右上、歯車マークを押して、設定画面 Repository Settings を開く。
 7. 中ほどにあるUser Details の部分を確認する。User Nameなどが表示されていれば、これ以降の処理はスキップしてよい。表示されていなければ、「Add User Details」を押す。
 8. ユーザー情報を入力する画面が開くので、ユーザーネーム、メールアドレスを入力し、「Use Globally」にチェックが入っていることを確認して「Set User Details」を押す。
     - ユーザーネームはニックネームなどでも構いません。
 
-![](rsc/gitinit3.png)
+![](rsc/gitinit3.png){width=500}
 
 :::{.callout-note}
 ### ユーザー情報はターミナルからでも設定できる
@@ -120,15 +120,15 @@ VSCodeでGitを使いやすくするため、少しVSCodeの設定を操作し�
 
 1. 上部メニューの「ファイル」→「ユーザー設定」→「設定」を選択し、設定画面を開く
 
-![](rsc/autofetch1.png)
+![](rsc/autofetch1.png){width=500}
 
 2. 設定画面上部にある検索窓に「autofetch」と入力すると、「Git: Autofetch」という項目が下部に出てくるので、trueを選択
 
-![](rsc/autofetch2.png)
+![](rsc/autofetch2.png){width=500}
 
 3. 同じく、設定画面上部にある検索窓に「Git Show Action Button 」と入力。3つのチェックボックスが並んでいる二つ目、「追跡リモートブランチがない場合に・・・(publish)」と書かれている項目のチェックは外しておく。
 
-![](rsc/autofetch3.png)
+![](rsc/autofetch3.png){width=500}
 
 以上で、VSCodeの初期設定は完了です。特に保存ボタンはないので、このまま設定画面は消して構いません。
 
@@ -149,11 +149,11 @@ VSCodeでGitを使いやすくするため、少しVSCodeの設定を操作し�
 
 [GitHub公式サイト](https://github.com/)を開き、右上の「Sign up」を押します。
 
-![](rsc/github_singup1.png)
+![](rsc/github_singup1.png){width=500}
 
 開いた画面でメールアドレス、パスワード、ユーザーネームを選びます。ユーザーネームは英数字とハイフンのみが使用できます。
 
-![](rsc/github_singup2.png)
+![](rsc/github_singup2.png){width=500}
 
 Continueを押した後は、指示に従いましょう。画像認証後、メールアドレスに届くコードを入力するように求められるはずです。
 

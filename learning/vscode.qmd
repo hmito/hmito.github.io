@@ -35,7 +35,7 @@ execute:
 winget install Microsoft.VisualStudioCode
 ```
 
-![](vscode/rsc/powershell_vscode.png)
+![](vscode/rsc/powershell_vscode.png){width=500}
 
 ### Macの場合
 
@@ -56,21 +56,21 @@ brew install --cask visual-studio-code
 code
 ```
 
-![](vscode/rsc/initial.png)
+![](vscode/rsc/initial.png){width=500}
 
 もちろん、スタートメニュー（Windows）やアプリ一覧から開いてもかまいません。
 
 ## 日本語化
 デフォルトでは英語表示なので、日本語化しましょう。左側のメニューから拡張機能ボタン（4つの四角マーク）を選びます。検索窓で**Japanese**を検索し、出てきた一番上の**Japanese Language Pack for Visual Studio Code**のinstallボタンをクリックします。
 
-![](vscode/rsc/ext_japanese.png)
+![](vscode/rsc/ext_japanese.png){width=500}
 
-すると、右下に言語設定を変えて再起動するか尋ねてくるポップアップが出るので、青いボタンを押します。 ![](vscode/rsc/ext_japanese_ok.png)
+すると、右下に言語設定を変えて再起動するか尋ねてくるポップアップが出るので、青いボタンを押します。 ![](vscode/rsc/ext_japanese_ok.png){width=500}
 
 これで、表示が日本語に切り替わったはずです。
 
 ::: callout-note
-上記でうまく日本語化できない場合、**Japanese Language Pack for Visual Studio Code**のインストール後、VSCode上部の検索窓に 「\> display」と入力し、出てきた候補から「Configure Display Language」を選択し、日本語を選んでみてください。 ![](vscode/rsc/ext_japanese_config.png)
+上記でうまく日本語化できない場合、**Japanese Language Pack for Visual Studio Code**のインストール後、VSCode上部の検索窓に 「\> display」と入力し、出てきた候補から「Configure Display Language」を選択し、日本語を選んでみてください。 ![](vscode/rsc/ext_japanese_config.png){width=500}
 :::
 
 ## 使用方法
@@ -95,7 +95,7 @@ VSCodeは、通常フォルダ（ディレクトリ）を単位として開き�
 
 画面全体の構成は以下のようになっています。
 
-![](vscode/rsc/main.png)
+![](vscode/rsc/main.png){width=500}
 
 1. **メニューバー**：フォルダを開いたり、表示設定、細かい編集操作に使用。画面幅が狭いと省略され「≡」と単一ボタンとなっていることもある。
 2. **アクティビティバー**：主要なツールへのアイコンを表示。
@@ -105,15 +105,15 @@ VSCodeは、通常フォルダ（ディレクトリ）を単位として開き�
 
 アクティビティバーの一番上、ファイルマークのアイコンが、「エクスプローラ」ツールです。このツールは、サイドバーに開いたフォルダ内にあるファイル・フォルダ一覧を表示します。サイドバー上部には、現在開いているフォルダ名（この例では「古典集」）が表示されます。
 
-![](vscode/rsc/explorer1.png)
+![](vscode/rsc/explorer1.png){width=500}
 
 ファイルをクリックすると、メイン画面にそのファイルが開きます。ワンクリックだと
 
-![](vscode/rsc/menu1.png)
+![](vscode/rsc/menu1.png){width=500}
 
 これらのファイル・フォルダの配置は、実際のフォルダ内の階層構造と一致しています。
 
-![](vscode/rsc/menu1_compare.png)
+![](vscode/rsc/menu1_compare.png){width=500}
 
 
 
@@ -131,9 +131,9 @@ VSCodeは、通常フォルダ（ディレクトリ）を単位として開き�
 ::: {layout-ncol="2"}
 名付けたフォルダを新たに作成し、開いてみます。Windowsの場合、右クリックから「新規作成」→「フォルダ」の順で選び、作成したフォルダを選択した状態で「フォルダを選択」を押します。
 
-![](vscode/rsc/create_folder.png)
+![](vscode/rsc/create_folder.png){width=500}
 
-![](vscode/rsc/create_folder2.png)
+![](vscode/rsc/create_folder2.png){width=500}
 :::
 
 上手くいけば、左サイドバーに KOTEN とフォルダ名が書かれているはずです。 ![](vscode/rsc/open_folder2.png){width="75%"}
