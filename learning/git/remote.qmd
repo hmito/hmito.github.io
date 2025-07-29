@@ -250,7 +250,7 @@ GitGraphでは、以下のような3種類のブランチラベルでリモー�
 GitHubの場合は、以下のように操作します。
 
 1. GitHubにログインし、共同作業を行うリポジトリを開く
-2. Settingsのタブを押し、左メニューからCollaboratorsを選択
+2. Settingsのタブを押し、サイドバーからCollaboratorsを選択
 3. 画面の「Add people」ボタンから、相手のGitHubユーザー名、メールアドレスなどから検索し追加、またはメールで招待
 
 ![](rsc/collaborator.png){width=500}
