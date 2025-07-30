@@ -148,15 +148,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#vscodeとは" id="toc-vscodeとは" class="nav-link active" data-scroll-target="#vscodeとは">VSCodeとは</a></li>
+  <li><a href="#セットアップ" id="toc-セットアップ" class="nav-link" data-scroll-target="#セットアップ">セットアップ</a>
+  <ul class="collapse">
   <li><a href="#インストール" id="toc-インストール" class="nav-link" data-scroll-target="#インストール">インストール</a></li>
   <li><a href="#日本語化" id="toc-日本語化" class="nav-link" data-scroll-target="#日本語化">日本語化</a></li>
-  <li><a href="#使用方法" id="toc-使用方法" class="nav-link" data-scroll-target="#使用方法">使用方法</a>
-  <ul class="collapse">
-  <li><a href="#ファイルの表示" id="toc-ファイルの表示" class="nav-link" data-scroll-target="#ファイルの表示">ファイルの表示</a></li>
+  <li><a href="#拡張機能の導入" id="toc-拡張機能の導入" class="nav-link" data-scroll-target="#拡張機能の導入">拡張機能の導入</a></li>
   </ul></li>
-  <li><a href="#ファイルを比較する" id="toc-ファイルを比較する" class="nav-link" data-scroll-target="#ファイルを比較する">ファイルを比較する</a></li>
+  <li><a href="#基本の使い方" id="toc-基本の使い方" class="nav-link" data-scroll-target="#基本の使い方">基本の使い方</a>
+  <ul class="collapse">
+  <li><a href="#開く単位はフォルダ" id="toc-開く単位はフォルダ" class="nav-link" data-scroll-target="#開く単位はフォルダ">開く単位はフォルダ</a></li>
+  <li><a href="#画面構成" id="toc-画面構成" class="nav-link" data-scroll-target="#画面構成">画面構成</a></li>
+  <li><a href="#ファイルの表示と編集" id="toc-ファイルの表示と編集" class="nav-link" data-scroll-target="#ファイルの表示と編集">ファイルの表示と編集</a></li>
+  <li><a href="#ファイル形式ごとの表示" id="toc-ファイル形式ごとの表示" class="nav-link" data-scroll-target="#ファイル形式ごとの表示">ファイル形式ごとの表示</a></li>
+  <li><a href="#ファイルの移動作成削除" id="toc-ファイルの移動作成削除" class="nav-link" data-scroll-target="#ファイルの移動作成削除">ファイルの移動、作成、削除</a></li>
+  </ul></li>
+  <li><a href="#便利な機能" id="toc-便利な機能" class="nav-link" data-scroll-target="#便利な機能">便利な機能</a>
+  <ul class="collapse">
+  <li><a href="#ファイルの比較" id="toc-ファイルの比較" class="nav-link" data-scroll-target="#ファイルの比較">ファイルの比較</a></li>
   <li><a href="#検索置換" id="toc-検索置換" class="nav-link" data-scroll-target="#検索置換">検索、置換</a></li>
-  <li><a href="#おすすめの設定" id="toc-おすすめの設定" class="nav-link" data-scroll-target="#おすすめの設定">おすすめの設定</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -186,16 +196,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="vscodeとは">VSCodeとは</h2>
 <p><a href="https://code.visualstudio.com/"><strong>Visual Studio Code</strong></a> (以下VSCode)は、エディタ（ソースコードを書くためのソフト）の一種です。以下のような特徴を持つことから、現在幅広く使われています。</p>
 <ul>
-<li>Windows、macOS、Linuxなど、環境を問わず無料で利用可能</li>
+<li>軽量で、動作が非常に高速</li>
 <li>txtはもちろん、R、Python、C++、md、htmlなどほとんどの言語・ファイル形式に対応</li>
 <li>プログラムの記述、実行、デバッグ、ソースコード管理なまで、一通りの機能がそろっている</li>
 <li>拡張機能をはじめ、カスタマイズ性が高い</li>
-<li>軽量で、動作が非常に高速</li>
+<li>Windows、macOS、Linuxなど、環境を問わず無料で利用可能</li>
 </ul>
 <p>このページでは、<strong>Visual Studio Code</strong>のインストールから簡単な使い方まで、一通り解説します。</p>
 </section>
-<section id="インストール" class="level2">
-<h2 class="anchored" data-anchor-id="インストール">インストール</h2>
+<section id="セットアップ" class="level2">
+<h2 class="anchored" data-anchor-id="セットアップ">セットアップ</h2>
+<section id="インストール" class="level3">
+<h3 class="anchored" data-anchor-id="インストール">インストール</h3>
 <p><a href="https://code.visualstudio.com/">公式Webサイト</a>からインストーラーをダウンロードしてきてもよいですが、以下のような<code>winget</code>（Windows）あるいは<code>brew</code>（macOS）を使ったインストールが簡単です。</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Windowsの場合</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Macの場合</a></li></ul>
@@ -205,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install Microsoft.VisualStudioCode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><img src="vscode/rsc/powershell_vscode.png" class="img-fluid"></p>
+<p><img src="vscode/rsc/powershell_vscode.png" class="img-fluid" width="500"></p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p><a href="https://brew.sh">homebrew</a>をインストール後、ターミナルで以下のコマンドを入力し、最後にエンターキーをおしてください。</p>
@@ -221,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+webサイトからもダウンロードできます
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -232,14 +244,14 @@ Note
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><img src="vscode/rsc/initial.png" class="img-fluid"></p>
+<p><img src="vscode/rsc/initial.png" class="img-fluid" width="500"></p>
 <p>もちろん、スタートメニュー（Windows）やアプリ一覧から開いてもかまいません。</p>
 </section>
-<section id="日本語化" class="level2">
-<h2 class="anchored" data-anchor-id="日本語化">日本語化</h2>
-<p>デフォルトでは英語表示なので、日本語化しましょう。左側のメニューから拡張機能ボタン（4つの四角マーク）を選びます。検索窓で<strong>Japanese</strong>を検索し、出てきた一番上の<strong>Japanese Language Pack for Visual Studio Code</strong>のinstallボタンをクリックします。</p>
-<p><img src="vscode/rsc/ext_japanese.png" class="img-fluid"></p>
-<p>すると、右下に言語設定を変えて再起動するか尋ねてくるポップアップが出るので、青いボタンを押します。 <img src="vscode/rsc/ext_japanese_ok.png" class="img-fluid"></p>
+<section id="日本語化" class="level3">
+<h3 class="anchored" data-anchor-id="日本語化">日本語化</h3>
+<p>デフォルトでは英語表示なので、日本語化しましょう。左側のアクティビティバーから拡張機能ボタン（4つの四角マーク）を選びます。検索窓で<strong>Japanese</strong>を検索し、出てきた一番上の<strong>Japanese Language Pack for Visual Studio Code</strong>のinstallボタンをクリックします。</p>
+<p><img src="vscode/rsc/ext_japanese.png" class="img-fluid" width="500"></p>
+<p>すると、右下に言語設定を変えて再起動するか尋ねてくるポップアップが出るので、青いボタンを押します。 <img src="vscode/rsc/ext_japanese_ok.png" class="img-fluid" width="500"></p>
 <p>これで、表示が日本語に切り替わったはずです。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -247,93 +259,258 @@ Note
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+うまく日本語化できない？
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>上記でうまく日本語化できない場合、<strong>Japanese Language Pack for Visual Studio Code</strong>のインストール後、VSCode上部の検索窓に 「&gt; display」と入力し、出てきた候補から「Configure Display Language」を選択し、日本語を選んでみてください。 <img src="vscode/rsc/ext_japanese_config.png" class="img-fluid"></p>
+<p>上記でうまく日本語化できない場合、<strong>Japanese Language Pack for Visual Studio Code</strong>のインストール後、VSCode上部の検索窓に 「&gt; display」と入力し、出てきた候補から「Configure Display Language」を選択し、日本語を選んでみてください。 <img src="vscode/rsc/ext_japanese_config.png" class="img-fluid" width="500"></p>
 </div>
 </div>
 </section>
-<section id="使用方法" class="level2">
-<h2 class="anchored" data-anchor-id="使用方法">使用方法</h2>
-<section id="ファイルの表示" class="level3">
-<h3 class="anchored" data-anchor-id="ファイルの表示">ファイルの表示</h3>
-<p>VSCodeは、通常フォルダ（ディレクトリ）を単位として開きます。これは、プログラミングでは複数のファイルを同時に扱うことが多いためです。</p>
-<p>上部メニューの「ファイル」から「フォルダーを開く」を選択し、目的のフォルダを選択することでそのフォルダを開くことができます。</p>
-<p><img src="vscode/rsc/open_folder.png" class="img-fluid" style="width:50.0%"></p>
+<section id="拡張機能の導入" class="level3">
+<h3 class="anchored" data-anchor-id="拡張機能の導入">拡張機能の導入</h3>
+<p>以下の説明では、VSCodeに拡張機能を導入する操作がしばしば出てきます。実は、先ほど日本語化した際にインストールした<strong>Japanese Language Pack for Visual Studio Code</strong>は拡張機能の一種です。ほかの拡張機能も導入方法は同じです。</p>
+<ol type="1">
+<li>アクティビティバーから拡張機能ボタン（4つの四角マーク）を選ぶ。</li>
+<li>検索窓で導入したい拡張機能の名称を検索し、該当する拡張機能のインストールボタンを押す。</li>
+<li>表示されていた「インストール」の表示が消えれば完了。</li>
+</ol>
+<p><img src="git/rsc/vscode_extension.png" class="img-fluid" width="500"></p>
+</section>
+</section>
+<section id="基本の使い方" class="level2">
+<h2 class="anchored" data-anchor-id="基本の使い方">基本の使い方</h2>
+<section id="開く単位はフォルダ" class="level3">
+<h3 class="anchored" data-anchor-id="開く単位はフォルダ">開く単位はフォルダ</h3>
+<p>VSCodeでは、フォルダ（ディレクトリ）を単位として開くことをお勧めします。これは、プログラミングでは複数のファイルを同時に扱うことが多いためです。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+ファイルは開けない？
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>初めて開くフォルダでは、以下の画像のような警告画面が表示されることがあります。自分で作成したフォルダや、信頼できる場所からダウンロードしたファイルの場合は、気にせず「はい、作成者を信頼します」を選んでください。「いいえ」を選んだ場合、プログラムの実行等が制限されます。</p>
+<p>もちろん、ファイルを単独で開くこともできます。ただ、後述するエクスプローラなどの一部機能が使えなくなるため、特に理由がなければ「いじりたいファイルがあるフォルダごと開く」ことを癖にしておくと良いでしょう。</p>
+</div>
+</div>
+<ul>
+<li><strong>フォルダを開く</strong>：上部メニューの「ファイル」から「フォルダーを開く」を選択し、目的のフォルダを選択することでそのフォルダを開くことができます。</li>
+</ul>
+<p><img src="vscode/rsc/open_folder.png" class="img-fluid" width="300"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+作成者を信頼しますか？
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>初めて開くフォルダでは、以下の画像のような警告画面が表示されることがあります。VSCodeは読み込んだプログラムの実行などが簡単にできるため、悪意のあるプログラムの実行を防ぐため警告が表示されるようです。</p>
+<p><img src="vscode/rsc/believe.png" class="img-fluid" width="500"></p>
+<p>自分で作成したフォルダや、信頼できる場所からダウンロードしたファイルの場合、気にせず「はい、作成者を信頼します」を選んでください。「いいえ」を選んだ場合、プログラムの実行等が制限されます。</p>
 <p>なお、「はい」の上部にある「親フォルダ・・・内のすべてのファイルの作成者を信頼します」にチェックを入れると、以後その親フォルダ内（つまり開いたフォルダの一つ上の階層のフォルダ内）にあるファイル・フォルダを開く場合は警告が表示されなくなります。</p>
-<p><img src="vscode/rsc/believe.png" class="img-fluid" style="width:50.0%"></p>
 </div>
 </div>
-<p>ここでは、「古典集」というサンプルフォルダを開いてみます。このサンプルを試してみたい場合は、以下からzipファイルをダウンロード後、中にある「古典集」というフォルダを適当な場所においてから開いてみて下さい。</p>
+<p>以下では、「古典集」というサンプルフォルダを開いてみます。このサンプルを試してみたい場合は、以下からzipファイルをダウンロード後、中にある「古典集」というフォルダを適当な場所においてから開いてみて下さい。</p>
 <p><a href="vscode/rsc/VSCode練習用フォルダ.zip">【古典集（サンプルフォルダ）をダウンロード】</a></p>
+</section>
+<section id="画面構成" class="level3">
+<h3 class="anchored" data-anchor-id="画面構成">画面構成</h3>
 <p>画面全体の構成は以下のようになっています。</p>
-<p><img src="vscode/rsc/main.png" class="img-fluid"></p>
+<p><img src="vscode/rsc/main.png" class="img-fluid" width="500"></p>
 <ol type="1">
 <li><strong>メニューバー</strong>：フォルダを開いたり、表示設定、細かい編集操作に使用。画面幅が狭いと省略され「≡」と単一ボタンとなっていることもある。</li>
-<li><strong>アクティビティバー</strong>：主要なツールへのアイコンを表示。</li>
-<li><strong>サイドバー</strong>：アクティビティバーで選択しているツールの内容を表示。</li>
+<li><strong>アクティビティバー</strong>：主要なツールへのアイコンを表示。基本的にここを切り替えながら作業する。</li>
+<li><strong>サイドバー</strong>：アクティビティバーで選択している画面を表示。</li>
 <li><strong>メイン画面</strong>：開いたファイル等はここにタブ形式で表示。</li>
 <li><strong>ステータスバー</strong>：ファイルについての情報等を表示</li>
 </ol>
-<p>アクティビティバーの一番上、ファイルマークのアイコンが、「エクスプローラ」ツールです。このツールは、サイドバーに開いたフォルダ内にあるファイル・フォルダ一覧を表示します。サイドバー上部には、現在開いているフォルダ名（この例では「古典集」）が表示されます。</p>
-<p><img src="vscode/rsc/explorer1.png" class="img-fluid"></p>
-<p>ファイルをクリックすると、メイン画面にそのファイルが開きます。ワンクリックだと</p>
-<p><img src="vscode/rsc/menu1.png" class="img-fluid"></p>
-<p>これらのファイル・フォルダの配置は、実際のフォルダ内の階層構造と一致しています。</p>
-<p><img src="vscode/rsc/menu1_compare.png" class="img-fluid"></p>
-<p>この画面からは、おおよそのファイル操作を行うことができます。 - ファイル名をクリック&amp;ドラッグで移動させると、ファイルの位置も移動します- 名前の変更・ファイルの削除も、ファイルを右クリックしたメニューから行えます</p>
-<div>
-
+</section>
+<section id="ファイルの表示と編集" class="level3">
+<h3 class="anchored" data-anchor-id="ファイルの表示と編集">ファイルの表示と編集</h3>
+<p>アクティビティバーの一番上、ファイルマークのアイコンが、「エクスプローラ」です。フォルダの中身の表示、ファイルの表示、ファイルの作成・削除などを行います。</p>
+<ul>
+<li>サイドバー上部には、現在開いているフォルダ名（この例では「古典集」）が表示される。</li>
+<li>開いたフォルダ内にあるファイル・フォルダ一覧が並ぶ
+<ul>
+<li>これらのファイル・フォルダの配置は、実際のフォルダ内の階層構造と一致している。</li>
+</ul></li>
+</ul>
+<p><img src="vscode/rsc/explorer_dir.png" class="img-fluid" width="500"></p>
+<ul>
+<li>ファイルをクリックすると、メイン画面にそのファイルがタブで開く。
+<ul>
+<li>ワンクリックだと上部タブのファイル名が斜体の「プレビューモード」で表示される。この状態だと、別のファイルをクリックすると表示が切り替わる。</li>
+<li>ダブルクリック、またはプレビューモードで開いたファイルを編集すると、ファイル名が通常のフォントになり、タブの閉じる「×」を押さない限り開いたままになる。</li>
+</ul></li>
+</ul>
+<p><img src="vscode/rsc/preview_mode.png" class="img-fluid" width="500"></p>
+<ul>
+<li>ファイルを編集すると、タブの閉じるマークが「○」に変わる。保存すると「×」に戻る。</li>
+</ul>
+<p><img src="vscode/rsc/unsaved.png" class="img-fluid" width="300"></p>
+<ul>
+<li>未保存のファイルがあると、その数がエクスプローラボタンにバッジで表示される</li>
+</ul>
+<p><img src="vscode/rsc/unsaved2.png" class="img-fluid" width="300"></p>
+<ul>
+<li>一行が右側に長すぎる場合、メニューバーの「表示」→「右端での折り返し」を選択することで、折り返される。</li>
+</ul>
+<p><img src="vscode/rsc/preview_right.png" class="img-fluid" width="500"></p>
+<ul>
+<li>メイン画面右上の「分割」ボタンを押すことで、複数のファイルを並べて表示できる</li>
+</ul>
+<p><img src="vscode/rsc/preview_div.png" class="img-fluid" width="500"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-
-</div>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>名付けたフォルダを新たに作成し、開いてみます。Windowsの場合、右クリックから「新規作成」→「フォルダ」の順で選び、作成したフォルダを選択した状態で「フォルダを選択」を押します。</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="vscode/rsc/create_folder.png" class="img-fluid"></p>
+<div class="callout-title-container flex-fill">
+不要な表示を消しておく
 </div>
 </div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="vscode/rsc/create_folder2.png" class="img-fluid"></p>
+<div class="callout-body-container callout-body">
+<p>初期設定では、いくつか混乱を招きやすい表示設定がなされているので、2か所ほど設定変更することをお勧めします。</p>
+<ul>
+<li>エクスプローラでは、最初開いたタブの一覧などが表示されるようになっています。しかし、フォルダ内の構造と紛らわしいので、消しておくことをお勧めします。
+<ul>
+<li>エクスプローラ画面の右上、「…」をクリックし、フォルダー以外のチェックを外す</li>
+<li>戻し方は、再度「…」をクリックしチェックを入れるだけです</li>
+</ul></li>
+</ul>
+<p><img src="vscode/rsc/explorer_config.png" class="img-fluid" width="500"></p>
+<ul>
+<li>ファイルを開くと、スクロールバーの横に「ミニマップ」と呼ばれるファイルの縮小表示がなされます。巨大なファイルでもない限り不要なので、消しておくことをお勧めします。
+<ul>
+<li>ミニマップ上で右クリックし、「ミニマップ」のチェックを外す。</li>
+<li>戻し方は、メニューバーの「表示」→「外観」→「ミニマップ」をチェック。</li>
+</ul></li>
+</ul>
+<p><img src="vscode/rsc/minimap_config.png" class="img-fluid" width="500"></p>
 </div>
 </div>
+</section>
+<section id="ファイル形式ごとの表示" class="level3">
+<h3 class="anchored" data-anchor-id="ファイル形式ごとの表示">ファイル形式ごとの表示</h3>
+<p>ファイルの拡張子に応じて柔軟に表示が切り替わる点が、VSCodeの大きな特徴の一つです。一部は拡張機能の導入が必要です。</p>
+<ul>
+<li><strong>画像ファイル</strong>：多くの形式はタブで表示可能</li>
+<li><strong>markdown形式</strong>：右上のプレビューボタンを押すことで、成形された表示を確認できる。</li>
+</ul>
+<p><img src="vscode/rsc/preview_md.png" class="img-fluid" width="500"></p>
+<ul>
+<li><strong>html形式</strong>：html構文が色分けで表示される
+<ul>
+<li><strong>拡張機能「HTML Preview」</strong>を入れることで、プレビューボタンが表示される。</li>
+</ul></li>
+</ul>
+<p><img src="vscode/rsc/preview_html.png" class="img-fluid" width="500"></p>
+<ul>
+<li><strong>json形式</strong>：json構文が色分けで表示され、エラーがあると赤く表示される</li>
+</ul>
+<p><img src="vscode/rsc/preview_json.png" class="img-fluid" width="500"></p>
+<ul>
+<li><strong>csv形式</strong>：<strong>拡張機能「Rainbow CSV」</strong>を入れることで、列ごとに色分けで表示される。</li>
+</ul>
+<p><img src="vscode/rsc/preview_csv.png" class="img-fluid" width="500"></p>
+<ul>
+<li><strong>pyファイル（Python言語）</strong>：<strong>拡張機能「Python」</strong>を入れることで、メイン画面右上に実行ボタン「▷」が表示される。押すと、下部のターミナルに実行結果が表示される。
+<ul>
+<li>別途、pythonのインストールが必要です。</li>
+</ul></li>
+</ul>
+<p><img src="vscode/rsc/preview_py.png" class="img-fluid" width="500"></p>
+<ul>
+<li><strong>rファイル（R言語）</strong>：<strong>拡張機能「R」</strong>を入れることで、メイン画面右上に実行ボタン「▷」が表示される。押すと、下部のターミナルに実行結果が表示される。
+<ul>
+<li>初回のみRの起動に使われるので、2回実行ボタンを押す必要があります。</li>
+<li>別途、Rのインストールが必要です。</li>
+</ul></li>
+</ul>
+<p><img src="vscode/rsc/preview_r.png" class="img-fluid" width="500"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>上手くいけば、左サイドバーに KOTEN とフォルダ名が書かれているはずです。 <img src="vscode/rsc/open_folder2.png" class="img-fluid" style="width:75.0%"></p>
+<div class="callout-title-container flex-fill">
+拡張機能のおすすめ
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ファイルを開くと、右下におすすめの拡張機能が表示されることがあります。基本的に入れて損はない拡張機能がおすすめされるので、インストールしておいて構いません。</p>
+<p><img src="vscode/rsc/ext_suggest.png" class="img-fluid" width="300"></p>
+</div>
+</div>
+</section>
+<section id="ファイルの移動作成削除" class="level3">
+<h3 class="anchored" data-anchor-id="ファイルの移動作成削除">ファイルの移動、作成、削除</h3>
+<p>エクスプローラからは、様々なファイル操作が可能です。</p>
+<ul>
+<li><strong>ファイルの作成</strong>：エクスプローラ上部のボタンから新規ファイルの作成・新規フォルダの作成。
+<ul>
+<li>クリックすると名前欄への入力に切り替わる。</li>
+<li>拡張子でファイル種別を識別しているので、必ず拡張子まで書く。</li>
+<li>メニューバーの「ファイル」→「新しいファイル」でも同様。</li>
+</ul></li>
+</ul>
+<p><img src="vscode/rsc/explorer_button.png" class="img-fluid" width="200"></p>
+<ul>
+<li><strong>ファイルの移動</strong>：ファイル名をクリック&amp;ドラッグで移動</li>
+<li><strong>ファイルの削除、名前変更、コピー</strong>ファイルを右クリックしたメニューからコピーや名前の変更、ファイルの削除が可能</li>
+</ul>
 </section>
 </section>
-<section id="ファイルを比較する" class="level2">
-<h2 class="anchored" data-anchor-id="ファイルを比較する">ファイルを比較する</h2>
+<section id="便利な機能" class="level2">
+<h2 class="anchored" data-anchor-id="便利な機能">便利な機能</h2>
+<p>VSCodeを使用する上で、いくつかの便利な機能について触れておきます。</p>
+<section id="ファイルの比較" class="level3">
+<h3 class="anchored" data-anchor-id="ファイルの比較">ファイルの比較</h3>
+<p>2つのファイル間の差分を表示できます。</p>
+<ol type="1">
+<li>変更「前」のファイルをエクスプローラで右クリックし、「比較対象の選択」を選ぶ</li>
+<li>変更「後」のファイルをエクスプローラで右クリックし、「選択項目と比較」を選ぶ</li>
+</ol>
+<p><img src="vscode/rsc/filecomp1.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>「変更前ファイル⇔変更後ファイル」の名称のタブが開き、差分が赤（削除）と緑（挿入）で表示される</li>
+</ol>
+<p><img src="vscode/rsc/filecomp2.png" class="img-fluid" width="500"></p>
 </section>
-<section id="検索置換" class="level2">
-<h2 class="anchored" data-anchor-id="検索置換">検索、置換</h2>
-</section>
-<section id="おすすめの設定" class="level2">
-<h2 class="anchored" data-anchor-id="おすすめの設定">おすすめの設定</h2>
-<p>最後に、使いやすくするための細かい表示設定を紹介します。これらの設定は好みの問題なので、必ずしも設定する必要はありません。実際に使ってみながら、検討してみてください。</p>
-<p>ミニマップ</p>
+<section id="検索置換" class="level3">
+<h3 class="anchored" data-anchor-id="検索置換">検索、置換</h3>
+<p>VSCodeは二つの検索機能を持っています。</p>
+<p>一つはファイル内検索です。ファイルを開いた状態で「Ctrl」+「F」で開きます。</p>
+<ul>
+<li>右端の「&gt;」を押すと、置換モードになる。</li>
+<li>検索欄右端の3つのボタンはそれぞれ以下の通り
+<ul>
+<li>「Aa」：大文字と小文字を区別する（デフォルトでは区別しません）</li>
+<li>「ab」：単語単位で検索する（スペースやハイフンなどの区切りで分けて一致する場合のみヒット）</li>
+<li>「■*」：正規表現と呼ばれる複雑な検索条件を表現する記法を有効にする</li>
+</ul></li>
+<li>一番右端の「≡」を押すと、選択した範囲内で検索</li>
+</ul>
+<p><img src="vscode/rsc/search_simple.png" class="img-fluid"></p>
+<p>もう一つは、フォルダ内検索です。アクティビティバー二つ目の虫眼鏡が「検索」ボタンで開きます。</p>
+<ul>
+<li>フォルダ内にある全ファイルに対して、検索できる。
+<ul>
+<li>ヒットしたリストをクリックすると、ファイルの該当部分が表示される。</li>
+</ul></li>
+<li>右端の「&gt;」を押すと、置換モードになる。</li>
+<li>検索欄右端の3つのボタンの機能はファイル内検索と同じ。</li>
+</ul>
+<p><img src="vscode/rsc/search_detail.png" class="img-fluid"></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
