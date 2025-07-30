@@ -2,7 +2,7 @@
 title: "資料"
 ---
 ### プログラミング
-- **VSCodeの使い方**<br/>
+- **[VSCodeの使い方](learning/vscode.qmd)**<br/>
 非常に軽量でありながら様々なOS・ファイル形式に対応する優れたエディタ、**Visual Studio Code** (以下VSCode)の使い方についてまとめました。
 -  **[git入門](learning/git.qmd)**<br/>
 ドキュメントやソースコードのバージョン管理用ツール、gitをVSCodeを使って簡単に利用する方法をまとめました。
