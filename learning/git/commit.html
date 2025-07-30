@@ -172,19 +172,23 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>gitで新たなフォルダの変更履歴を管理し始めるには、そのフォルダにおいて「リポジトリの初期化」処理が必要</strong>です。この操作は、新しいフォルダを管理の対象にするたびに一度だけ実行する処理です。フォルダは空でも構いませんし、すでにいくつかのファイルがあってもかまいません。</p>
 <ol type="1">
 <li>まず、VSCodeを使って管理の対象とする<a href="../../learning/vscode.html">フォルダを開く</a>。</li>
-<li>アクティビティバーから「ソース管理」（丸三つが線でつながれたボタン）を開きます。</li>
-<li>ソース管理画面に表示されている「リポジトリを初期化する」ボタンを押すと、表示が「コミット」と切り替わります。これで初期化完了です。
+<li>アクティビティバーから「ソース管理」（丸三つが線でつながれたボタン）を開く。
 <ul>
-<li><a href="setup.html#vscodeのカスタマイズ">VSCodeの設定</a>を行っていない場合「Branchの発行」と表示されますが、無視してかまいません。</li>
+<li>以後、gitに関係する操作はほとんどこの画面から行います。</li>
+</ul></li>
+<li>ソース管理画面に表示されている「リポジトリを初期化する」ボタンを押すと、表示が「コミット」と切り替わりる。
+<ul>
+<li><a href="setup.html#vscodeのカスタマイズ">VSCodeの設定</a>を行っていない場合「Branchの発行」と表示されるが、無視してかまわない。</li>
 </ul></li>
 </ol>
-<p><img src="rsc/repoinit.png" class="img-fluid"></p>
+<p><img src="rsc/repoinit.png" class="img-fluid" width="500"></p>
+<p>これで初期化完了です。</p>
 </section>
 <section id="ファイルの変更" class="level2">
 <h2 class="anchored" data-anchor-id="ファイルの変更">ファイルの変更</h2>
 <p>リポジトリの初期化が済めば、あとは好きにそのフォルダ内のファイルを編集して構いません。<strong>gitはフォルダ内を監視し、変更があれば自動的に検出</strong>します。前回の状態からの「差分」を監視しているので、VSCodeを使わずに変更した内容でも問題なく検出してくれます。</p>
-<p>試しにいくつかのファイルを編集し、保存してみてください。<strong>変更されたファイルがある場合、ソース管理ボタン上に青いバッジで表示</strong>されるはずです。バッジ中の数字は、変更されたファイルの数を表しています。ソース管理の画面を開くと、変更されたファイルの一覧が表示されているはずです。</p>
-<p><img src="rsc/commit1.png" class="img-fluid"></p>
+<p>試しにいくつかのファイルを編集し、保存してみてください。<strong>変更されたファイルがある場合、その数がソース管理ボタン上に青いバッジで表示</strong>されます。ソース管理の画面を開くと、変更されたファイルの一覧が表示されます。</p>
+<p><img src="rsc/commit1.png" class="img-fluid" width="500"></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -195,15 +199,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>保存されていない状態だとソース管理には表示されませんので、必ず保存できているか確認してください（ファイルタブの右端が通常の閉じるボタン×ではなく●となっていると未保存です）。</p>
-<p><img src="rsc/vscode_unsaved.png" class="img-fluid"></p>
+<p>保存されていない状態だとソース管理には表示されないので、必ず保存していることを確認してください（ファイルタブの右端が通常の閉じるボタン×ではなく●となっていると未保存です）。</p>
+<p><img src="rsc/vscode_unsaved.png" class="img-fluid" width="500"></p>
 <p>未保存のファイルがあると、アクティビティバーの<strong>エクスプローラボタンの上に未保存のファイル数が青いバッジで表示</strong>されます。後述のステージ＆コミット操作を行う際は、バッジがついていないことを確認する癖をつけておきましょう。</p>
+<p><img src="rsc/vscode_unsaved2.png" class="img-fluid" width="500"></p>
 </div>
 </div>
 <p>クリックすると「ファイル名（作業ツリー）」という名前の新たなタブが開きます。このタブでは、変更内容が赤（削除）と緑（追加）で表示されています。右端には、ファイル全体の変更位置についてスクロールバーに重ねて同じく赤と緑で表示されています。</p>
-<p><img src="rsc/commit2.png" class="img-fluid"></p>
-<p>ファイル自体の追加・削除も変更の一種として扱われます。ソース管理画面では、ファイルの横につくアルファベットで「U:新規ファイル(Untracked)」「M:変更されたファイル(Modified)」「D:削除済ファイル(Deleted)」を区別することができます。</p>
-<p><img src="rsc/commit2a.png" class="img-fluid"></p>
+<p><img src="rsc/commit2.png" class="img-fluid" width="500"></p>
+<p>ファイル自体の追加・削除も変更の一種として扱われます。ソース管理画面では、ファイルの横につくアルファベットで変更内容を区別できます。</p>
+<ul>
+<li>U:新規ファイル(Untracked)</li>
+<li>M:変更されたファイル(Modified)</li>
+<li>D:削除済ファイル(Deleted)」</li>
+</ul>
+<p><img src="rsc/commit2a.png" class="img-fluid" width="500"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -214,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>ソース管理の画面から開けるのは、あくまで変更履歴を確認するためのファイル（作業ツリー）です。編集を行う場合は、エクスプローラ（左側のアクティビティバーの一番上のファイルボタンからファイルを開きましょう。</p>
+<p>ソース管理の画面から開けるのは、あくまで変更履歴の確認用タブ（作業ツリー）です。編集を行う場合は、エクスプローラ（左側のアクティビティバーの一番上のファイルボタン）からファイルを開きましょう。</p>
 </div>
 </div>
 </section>
@@ -227,24 +237,31 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-自動で履歴が記録されないのは？
+自動で記録されないのは？
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>自動で履歴が記録されないのは一見不便に思うかもしれませんが、これは編集中などの中途半端なタイミングで多数の履歴が残り、結果として後でどの履歴を確認すればよいか分からなくなるのを避けるためにこうした仕組みになっています。</p>
+<p>自動で履歴が記録されないのは一見不便に思うかもしれません。しかし、自動で記録する場合、編集中などの中途半端なタイミングで多数の履歴が残り、結果として後でどの履歴を確認すればよいか分からなくなってしまうでしょう。</p>
+<p>この問題を避けるために、gitでは記録は手動で行い、さらに作業内容を簡単にまとめたメッセージを残す仕組みになっています。</p>
 </div>
 </div>
 <section id="ステージ" class="level3">
 <h3 class="anchored" data-anchor-id="ステージ">ステージ</h3>
 <p><strong>「ステージ」は記録する変更内容を選択する操作です</strong>。ソース管理画面には編集した全てのファイルが表示されますが、これら全ての変更を一度に記録する必要はなく、どの変更を記録するかまず選ぶわけです。</p>
 <ul>
-<li><strong>ステージする</strong>には、「変更」にあるファイルに<strong>オンマウスした際に右側に表示される「＋」マークをクリック</strong>、または右クリックで表示される「変更をステージ」を選択します。これで、「ステージされている変更」にファイルが移動します。</li>
-</ul>
-<p><img src="rsc/commit3.png" class="img-fluid"></p>
+<li><strong>ステージする</strong>には、「変更」にあるファイルに<strong>オンマウスした際に右側に表示される「＋」マークをクリック</strong>、または右クリックで表示される「変更をステージ」を選択。
 <ul>
-<li><strong>ステージを取り消す場合</strong>は、「ステージされている変更」にあるファイルに<strong>オンマウスした際に右側に表示される「ー」マークをクリック</strong>、または右クリックで表示される「変更のステージング解除」を選択します。これで、「変更」にファイルが戻ります。</li>
+<li>ステージされると、「ステージされている変更」にファイルが移動する。</li>
+</ul></li>
 </ul>
-<p><img src="rsc/commit4.png" class="img-fluid"></p>
+<p><img src="rsc/commit3.png" class="img-fluid" width="500"></p>
+<ul>
+<li><strong>ステージを取り消す場合</strong>は、「ステージされている変更」にあるファイルに<strong>オンマウスした際に右側に表示される「ー」マークをクリック</strong>、または右クリックで表示される「変更のステージング解除」を選択。
+<ul>
+<li>ステージから外れると、「変更」にファイルが戻る。</li>
+</ul></li>
+</ul>
+<p><img src="rsc/commit4.png" class="img-fluid" width="500"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -259,19 +276,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <ul>
-<li>全ファイルの変更をステージしたければ、「変更」の行自体にオンマウスした際に右側に表示される「＋」マークをクリック、または右クリックで表示される「すべての変更をステージ」を選択します。</li>
-<li>ファイル丸ごとではなく、各ファイルの内部の変更毎にステージすることもできます。ファイルをクリックして「ファイル名（作業ツリー）」タブを開き、変更したい行を選択後左側に表示される「＋」マークをクリックします。</li>
+<li><strong>全ファイルの変更をステージ</strong>する場合、「変更」の行自体にオンマウスした際に右側に表示される「＋」マークをクリック、または右クリックで表示される「すべての変更をステージ」を選択。</li>
+<li><strong>各ファイルの変更内容の一部をステージ</strong>する場合、ファイルをクリックして「ファイル名（作業ツリー）」タブを開き、変更したい行を選択後左側に表示される「＋」マークをクリック。</li>
 </ul>
-<p><img src="rsc/commit5.png" class="img-fluid"></p>
+<p><img src="rsc/commit5.png" class="img-fluid" width="500"></p>
 </section>
 <section id="コミット" class="level3">
 <h3 class="anchored" data-anchor-id="コミット">コミット</h3>
 <p>記録したい内容をステージできたら、次に <strong>「コミット」でgitに変更履歴として記録</strong>します。この際、簡単な変更内容についてのメモをコミットボタンの上にある「メッセージ」欄に入力します。端的に何を変えたのかが後から振り返ってわかる記述が良いでしょう。</p>
 <ul>
-<li><strong>メッセージを入力し「コミット」ボタンを押す</strong>ことで、その時ステージされている変更履歴が記録されます。</li>
+<li><strong>メッセージを入力し「コミット」ボタンを押す</strong>
+<ul>
+<li>その時ステージされている変更履歴が記録される。</li>
+<li>ステージしなかった変更はそのまま残るため、続けてステージ、コミット操作をすることで複数回に分けて記録することもできる。</li>
+</ul></li>
 </ul>
-<p><img src="rsc/commit6.png" class="img-fluid"></p>
-<p>gitの普段の操作は、この「ステージ」と「コミット」の繰り返しです。ある程度まとまった変更を行ったら、キリが良いタイミングでコミットをする習慣をつけるのが、gitの利用の第一歩です。</p>
+<p><img src="rsc/commit6.png" class="img-fluid" width="500"></p>
+<p>gitの普段の操作は、この「ステージ」と「コミット」の繰り返しです。ある程度まとまった変更を行ったら、<strong>キリが良いタイミングでコミットをする習慣をつけるのが、gitの利用の第一歩</strong>です。</p>
 </section>
 </section>
 <section id="履歴を見る" class="level2">
@@ -281,25 +302,26 @@ ul.task-list li input[type="checkbox"] {
 <li>ソース管理画面の上部にある三つの点が複数の曲線でつながれた「Git Graph」ボタンをクリック</li>
 <li>画面下部ステータスバーの左側にある「Git Graph」の文字をクリック</li>
 </ul>
-<p><img src="rsc/history1.png" class="img-fluid"></p>
-<p>GitGraph画面では、下から上へとコミット操作によって保存された変更履歴が表示されています。</p>
+<p><img src="rsc/history1.png" class="img-fluid" width="500"></p>
+<p>GitGraph画面では、下から上へと<strong>コミットされた変更履歴が時系列に沿って表示</strong>されています。</p>
 <ul>
 <li><strong>各履歴をクリック</strong>することで、そのコミットによってどのファイルが変更されたか表示される。
 <ul>
 <li>表示された<strong>履歴中のファイルをクリック</strong>すると、そのファイルの変更内容自体も表示される。</li>
 </ul></li>
 </ul>
-<p><img src="rsc/history2.png" class="img-fluid"></p>
+<p><img src="rsc/history2.png" class="img-fluid" width="500"></p>
 <ul>
 <li><strong>複数の履歴の間に行われた全変更を調べる</strong>には、ある履歴をクリックした後、D別の履歴を<strong>Ctrlキーを押しながらクリック</strong></li>
 </ul>
-<p>ファイルごとの履歴も、同じく拡張機能としてインストールした<strong>Git History</strong>で調べることができます。以下のいずれかの操作でファイルの履歴一覧表示できます。</p>
+<hr>
+<p><strong>特定のファイルの変更履歴</strong>を調べる場合、拡張機能としてインストールした<strong>Git History</strong>を利用します。以下のいずれかの操作でファイルの履歴一覧表示できます。</p>
 <ul>
 <li>ファイルを開いていると右上に表示される「時計」マークをクリック</li>
 <li>ファイル名を右クリックして表示される「Git: View File History」を選択</li>
 </ul>
 <p>コミットを選択後、「Previous」ボタンを押すと、どのように変更されたかが表示されます。</p>
-<p><img src="rsc/history3.png" class="img-fluid"></p>
+<p><img src="rsc/history3.png" class="img-fluid" width="500"></p>
 </section>
 <section id="変更の破棄と取消" class="level2">
 <h2 class="anchored" data-anchor-id="変更の破棄と取消">変更の破棄と取消</h2>
@@ -307,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="コミット前の変更を破棄したい" class="level3">
 <h3 class="anchored" data-anchor-id="コミット前の変更を破棄したい">コミット前の変更を破棄したい</h3>
 <p>コミットする前の状態であれば、ソース管理画面でステージボタン「＋」の横にある<strong>変更を破棄ボタン「↶」を押すと、そのファイルの変更すべてが打ち消されます</strong>。ステージの場合と同様、ファイルの中の特定の部分だけ選択して変更を破棄することもできます。</p>
-<p><img src="rsc/revert1.png" class="img-fluid"></p>
+<p><img src="rsc/revert1.png" class="img-fluid" width="500"></p>
 </section>
 <section id="コミット後特定のコミットの内容を取り消したい" class="level3">
 <h3 class="anchored" data-anchor-id="コミット後特定のコミットの内容を取り消したい">コミット後、特定のコミットの内容を取り消したい</h3>
@@ -316,9 +338,9 @@ ul.task-list li input[type="checkbox"] {
 <li>GitGraphを開き、打ち消したいコミットメッセージの上（mainと書かれたマークの上だとうまくいきません）で右クリック</li>
 <li>メニューから「Revert」を選ぶと確認画面が出るので、「Yes, revert」を選択</li>
 </ol>
-<p><img src="rsc/revert2.png" class="img-fluid"></p>
+<p><img src="rsc/revert2.png" class="img-fluid" width="500"></p>
 <p>以上の操作で、「Revert “…”」というメッセージの新たなコミットが自動的に追加されます。このコミットは<strong>対象のコミットの全変更を打ち消すような変更</strong>を行うもので、結果としてリバート対象のコミットがなかったような状態になります。</p>
-<p><img src="rsc/revert3.png" class="img-fluid"></p>
+<p><img src="rsc/revert3.png" class="img-fluid" width="500"></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

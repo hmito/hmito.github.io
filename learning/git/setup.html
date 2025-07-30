@@ -180,7 +180,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>このページではgitを使うための環境を準備していきます。Gitアプリ、VSCode、そしてVSCodeを使いやすくするために、いくつかの拡張機能の導入や設定変更を行います。</p>
 <section id="gitアプリとgitクライアントの用意" class="level2">
 <h2 class="anchored" data-anchor-id="gitアプリとgitクライアントの用意">Gitアプリとgitクライアントの用意</h2>
-<p>gitを操作するためには、<strong>Git</strong>アプリが必要となります。<a href="https://git-scm.com/">公式Webサイト</a>からインストーラーをダウンロードしてきてもよいですが、以下のような<code>winget</code>（Windows）あるいは<code>brew</code>（macOS）を使ったインストールが簡単です。</p>
+<p>まず、アプリを二つインストールします。</p>
+<ol type="1">
+<li><strong>gitを操作するためのアプリ、「Git」</strong>をインストールする。<a href="https://git-scm.com/">公式Webサイト</a>からインストーラーをダウンロードしてきてもよいが、以下のような<code>winget</code>（Windows）あるいは<code>brew</code>（macOS）を使ったインストールが簡単。</li>
+</ol>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Windowsの場合</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Macの場合</a></li></ul>
 <div class="tab-content">
@@ -217,15 +220,21 @@ WebサイトからインストールでもOK
 <p>上手くいかなければ、以下のWebサイトからもインストール可能です。<br> <a href="https://git-scm.com/">https://git-scm.com</a></p>
 </div>
 </div>
-<p>次に、gitを視覚的に使えるようにするgitクライアントです。この解説では、<strong>Visual Studio Code</strong> (以下VSCode)を使用します。VSCodeは、エディタ（ソースコードを書くためのソフト）として極めて優秀ですが、ここでは、gitの管理用に用意します。</p>
-<p><a href="../../learning/vscode.html">別記事（VSCodeの使い方）</a>としてまとめてありますので、この記事を参考にインストールしてください。</p>
+<ol start="2" type="1">
+<li><strong>gitを視覚的に使えるようにするgitクライアント、「Visual Studio Code」</strong> (以下VSCode)をインストールします。VSCodeは、極めて優秀なエディタ（ソースコードを書くためのソフト）ですが、ここでは、gitの管理用に用意します。
+<ul>
+<li>インストール・セットアップ方法は<a href="../../learning/vscode.html">別記事（VSCodeの使い方）</a>参照。</li>
+</ul></li>
+</ol>
 </section>
 <section id="vscodeへの拡張機能の導入" class="level2">
 <h2 class="anchored" data-anchor-id="vscodeへの拡張機能の導入">VSCodeへの拡張機能の導入</h2>
 <p>次に、VSCodeでGitを使うための設定を行います。</p>
 <p>VSCodeは、拡張機能と呼ばれるアドインを入れることで、より使いやすくなります。Gitを使いやすくするために、二つの拡張機能を入れます。</p>
-<p>一つ目、<strong>Git Graph</strong>は、Gitの変更履歴全体をより視覚的に分かりやすくしてくれます。</p>
-<p>二つ目、<strong>Git History</strong>は、個別のファイルの変更履歴をより分かりやすくしてくれます。</p>
+<ol type="1">
+<li><strong>Git Graph</strong>：Gitの変更履歴全体をより視覚的に分かりやすく表示する機能を追加</li>
+<li><strong>Git History</strong>：個別のファイル毎の変更履歴を整理して表示する機能を追加</li>
+</ol>
 <p>いずれも以下の手順でインストールできます。</p>
 <ol type="1">
 <li>アクティビティバーから拡張機能ボタン（4つの四角マーク）を選ぶ。</li>
@@ -281,7 +290,6 @@ WebサイトからインストールでもOK
 </div>
 </div>
 <p>これで、Gitの初期設定は完了です。</p>
-<p>なお、今回使用した<strong>「ソース管理」の画面は、gitについての操作がまとめられた画面で、今後頻繁に使用する</strong>ので覚えておいてください。</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
