@@ -9,3 +9,33 @@ listing:
   categories: false
   fields: [image, title, description]
 ---
+
+1.	Ito et al. (2022a) “Future behaviours decision-making regarding travel avoidance during COVID-19 outbreaks”, Scientific Reports (12-1) p. 19780. (IF: 5.0)
+　感染症の流行予測には疫学理論が用いられるが、COVID-19パンデミック時に人間が行動を変容させたため予測精度が劣悪であることが明らかとなった。本研究では、民間企業の持つ宿泊予約のビッグデータと理論モデルを組み合わせることで、感染症の流行に応じた人々の行動変容の意思決定を定量する新たな手法を提案し、流行予測の改善が可能であることを示した。
+
+2.	Ito et al. (2022b), “Incorporating thermodynamics in predator–prey games predicts the diel foraging patterns of poikilothermic predators”, Journal of Animal Ecology (91-3), pp. 527–39. (IF: 4.8)
+サメの仲間は活動時間帯に大きな多様性があるが、これまでどのような要素が活動時間帯を左右しているのか、明確でなかった。本研究では、重要な要素と考えられている光、体温変動、そして餌となる小魚との相互作用を含む理論モデルを構築し、どの要素が重要か解析した。結果、サメの活動時間帯は光の影響よりも、サメの体サイズの変化に伴う体温変動パターンの変化と餌生物との相互作用で説明できることを示した。
+3.	Ito et al. (2021), “Evolution of honest reward signal in flowers”, Proceedings of the Royal Society B: Biological Sciences (288), p. 20202848. (IF: 5.5)
+一部の植物は、蜜などの送粉者への報酬が無くなると、花の色や匂いを変えて報酬の枯渇を「正直」に知らせる。しかし、送粉者は報酬のない花を避けようとするため、このような正直なシグナルは一見不利に見える。本研究では、花の報酬とシグナルの進化について理論的な解析を通して、このような戦略が「賢い送粉者に嫌われないようにしつつ愚かな送粉者を報酬無しで使役する」ためのものである可能性を世界で初めて理論的に示した。
+
+4.	Ito and Doebeli (2019), “The joint evolution of cooperation and competition” Journal of Theoretical Biology (480), pp. 1-12 (IF: 2.7)
+共通の利益のための協力行動は自然界で幅広く見られるが、そうした例ではしばしば協力で得られた利益をめぐる個体間の闘争が生じる。本研究では、このような闘争を伴う協力の進化を理論的に解析した。結果、闘争を伴う協力では、協力・闘争の既存理論でも予測されていなかった新たな社会関係が生じうることを示した。この結果は、個体間の社会関係を理解するには、協力や闘争のような特定の関係に絞らず、多面的な関係全体を考慮する重要性を示している。
+
+5.	Sato†, Ito† and Kudo (†: equal contribution) (2017) “Optimal foraging by herbivores maintains polymorphism in defence in a natural plant population”, Functional Ecology (31-12), pp. 2233-2243 (IF: 6.3)
+植物には被食防衛を持つ個体と持たない個体が集団内で共存している例がしばしばみられる。本研究では、ベイズ推定を使い理論モデルと実際の食害データを組み合わせることで、植食者は被食防衛を持つ植物個体の頻度に応じて採餌行動を変えており、その行動変化が被食防衛を持つ植物個体と持たない植物個体の共存をもたらしていることを、世界で初めて証明した。
+
+ Koichi Ito, Miki F. Suzuki, and K Mochizuki (2021) “Evolution of honest reward signal in flowers”, Proceedings of the Royal Society B: Biological Sciences (288), p. 20202848.
+　一部の植物は、蜜などの送粉者への報酬が無くなると、花の色や匂いを変えて報酬の枯渇を「正直」に知らせる。しかし、送粉者は報酬のない花を避けようとするため、このような正直なシグナルは一見不利に見える。本研究では、花の報酬とシグナルの進化について理論的な解析を通して、このような戦略が「賢い送粉者に嫌われないようにしつつ愚かな送粉者を報酬無しで使役する」ためのものである可能性を世界で初めて理論的に示した。
+
+2. Koichi Ito, Michael Doebeli (2019) “The joint evolution of cooperation and competition”, Journal of Theoretical Biology (480), pp. 1-12
+　共通の利益のために協力する行動は自然界で幅広く見られるが、そうした例ではしばしば協力で得られた利益をめぐる個体間での競争が生じる。本研究では、このような競争を伴う協力における進化を理論的に解析し、(i) 3タイプ以上の異なる協力レベルを持つ個体が進化・共存する、(ii)協力的な個体ほど、競争ではより攻撃的になる、(iii) 競争を伴う協力においては、協力・競争いずれかのみにはない複雑な社会関係が生じる、ことを示した。
+
+3. Yasuhiro Sato†, Koichi Ito†, Hiroshi Kudo (2017) “Optimal foraging by herbivores maintains polymorphism in defence in a natural plant population”, Functional Ecology (31-12), pp. 2233-2243
+(†: equal contribution)
+　植物には、毒やトゲといった被食防衛を持つ個体と持たない個体が集団内で混在して生育しているケースがしばしばみられる。本研究では、理論モデルと実際の食害データを組み合わせることで、(i) 植食者が被食防衛を持つ植物個体の頻度に応じて採餌戦略を変えており、(ii) その採餌行動の変化が被食防衛を持つ個体と持たない個体の共存をもたらしていることを、世界で初めて証明した。
+
+4. Koichi Ito, John McNamara, Atsushi Yamauchi, Andrew Higginson (2017), “The evolution of cooperation by negotiation in a noisy world”, Journal of Evolutionary Biology (30・3), pp.603-615
+　協力行動においては、しばしば相手がどの程度協力的かに応じて自身の協力への投資量を変える現象がみられる。本研究では、そうした相手の行動への「応答」の最適化に着目し、応答戦略の進化を理論的に研究した。結果、投資に対して得られる利益量の関数形に応じて、相手が協力的であるほど自身も協力的になる「正の応答」と、より非協力的になる「負の応答」の、どちらが進化するかが決まることを示した。
+
+5. Koichi Ito, Hisashi Ohtsuki, Atsushi Yamauchi (2015) “Relationship between aggregation of rewards and the possibility of polymorphism in continuous snowdrift games", Journal of Theoretical Biology (372), pp. 47-53.
+　自然界でみられる協力では、得られる利益は量的なものか確率的なものか、利益を増やそうとしているのか不利益を減らそうとしているのか、協力への投資が集約されて利益と変わるのか、あるいは個々の個体が投資して得た利益が集約されるのかなど、様々な投資が利益に変わるプロセス＝利益の集約様式が存在する。本研究では、このような集約様式によって、協力の多型、つまり協力的な個体と非協力的個体の出現条件が異なることを理論的に証明した。
